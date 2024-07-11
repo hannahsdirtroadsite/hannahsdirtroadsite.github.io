@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <script src="modalOps.js"></script>
+  <script src="addListing.js"></script>
+  <script src="getListing.js"></script>
+</head>
+
+<body onload="getAllRecipes()">
+
+  <!-- modal for viewing recipes -->
+  <div id="fullModal" class="modal" style="display: none">>
+    <div class="modal-content">
+      <span class="close" id="close-fullModal">&times;</span>
+      <button id="addToListBtn" onclick="addToGroceryList()">Add to List</button>
+      <h3 id="titleText"></h3>
+      <text id="recipeText"></text>
+      <text id="ingredientsText" hidden></text>
+    </div>
+  </div>
+
+  <div id="addModal" class="modal" style="display: none">>
+    <div class="modal-content">
+      <span class="close" id="close-addModal">&times;</span>
+      <input type="text" id="title" class="item">
+      <textarea id="ingredients" class="item"></textarea>
+      <textarea id="steps" class="item"></textarea>
+      <button id="post" onclick="postRecipe()">Add Recipe</button>
+    </div>
+  </div>
+  <div class="container" id="recipesContainer">
+    <div id="controlBtns">
+      <button id="addRecipeBtn" onclick="openModal('addModal')">Add New</button>
+      <button id="seeListBtn" onclick="viewList()">View List</button>
+    </div>
+  </div>
+
+  <!-- modal for viewing list -->
+  <div id="listModal" class="modal" style="display: none">
+    <div class="modal-content" id="listModal-content">
+      <span class="close" id="close-listModal">&times;</span>
+      <div class="span-content" id="list-span">
+        <div class="span-content" id="btn-span">
+          <button id="backBtn" onclick="location.reload()">Back to Recipes</button>
+          <button id="clearChkBtn" onclick="clearChecked()">Clear Checked</button>
+          <button id="clearAllBtn" onclick="clearAll()">Clear All</button>
+        </div>
+        <div id="list-content">
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
