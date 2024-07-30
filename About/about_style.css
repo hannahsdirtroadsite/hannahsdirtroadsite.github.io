@@ -10,14 +10,18 @@
         text-align: center;
     }
 
+    summary {
+        margin-bottom: 2vh;
+    }
+
     .agent_photo_left, .agent_photo_right {
         width: 70vw;
         margin-left: 13vw;
     }
 
     .headers {
-        align-items: center;
         text-align: center;
+        margin-bottom: 2vh;
     }
 
     .info_header_left {
@@ -25,13 +29,16 @@
     }
     
     .agent_bio {
-        text-align: justify;
         margin: auto;
     }
 
 }
 
 @media (min-width: 600px) {
+    summary {
+        height: 2vh;
+    }
+
     .agent_photo_left {
         width: 30vw;
         float: left;
@@ -71,5 +78,6 @@ summary {
     color: var(--DRRE_red);
     font-size: calc(15px + .5vw);
     width: max-content;
-    margin: auto;
+    margin-right: auto;
+    margin-left: auto;
 }
