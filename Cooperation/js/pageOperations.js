@@ -46,7 +46,7 @@ async function getAllListings() {
       openModal('modModal');
       $("#mod_id").val(data[0])
       $("#mod_address").val(data[1])
-      $("#mod_ar_num").val(data[2])
+      $("#mod_mls_num").val(data[2])
       $("#mod_payment").val(data[3])
       $("#mod_status").val(data[4])
       $("#mod_last_mod").val(data[5])
@@ -63,7 +63,7 @@ async function postListing() {
   //get info from modal
   var data = {};
   data.address = document.getElementById('add_address').value;
-  data.ar_num = document.getElementById('add_ar_num').value;
+  data.mls_num = document.getElementById('add_mls_num').value;
   data.payment = document.getElementById('add_payment').value;
   
   checkToken()
@@ -84,7 +84,7 @@ async function putListing() {
   var data = {};
   data.id = document.getElementById("mod_id").value;
   data.address = document.getElementById('mod_address').value;
-  data.ar_num = document.getElementById('mod_ar_num').value;
+  data.mls_num = document.getElementById('mod_mls_num').value;
   data.payment = document.getElementById('mod_payment').value;
 
   checkToken()
