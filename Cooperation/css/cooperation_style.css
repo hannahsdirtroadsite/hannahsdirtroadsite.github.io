@@ -1,0 +1,104 @@
+html {
+    height: 100%;
+    width: 100%;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td,
+th {
+    border: 1px solid var(--DRRE_dark_gray);
+    text-align: left;
+    padding: 8px;
+    font-family: 'Montserrat';
+}
+
+tr:nth-child(even) {
+    background-color: var(--sky_blue);
+}
+
+th {
+    color : var(--DRRE_red);
+}
+
+.login_link {
+    color: var(--DRRE_red);
+    font-family: 'Montserrat';
+    text-decoration: none;
+}
+
+.content {
+    margin-top: 1vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 3vh;
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .content_image {
+        width: 70vw;
+        margin-left: 13vw;
+    }
+    
+    .content_paragraph {
+        text-align: justify;
+        margin: auto;
+    }
+}
+
+@media (min-width: 600px) {
+    .content_image {
+        width: 50vw;
+        float: left;
+        margin: 5vw;
+    }
+    
+    .content_paragraph {
+        margin-top: 5vw;
+        text-align: justify;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+.content_paragraph {
+    font-family: 'Montserrat';
+    color : var(--DRRE_red);
+    margin-right: 5vw;
+    margin-left: 5vw;
+}
+
+.search_bar_div {
+    width: max-content;
+    margin-left: calc(50% - ((50vw + 70px) / 2));
+}
+
+.search_bar {
+    width: 50vw;
+    height: 30px;
+    border: solid;
+    border-width: 1px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.submit_search {
+    width: 70px;
+    height: 33.5px;
+    border: none;
+    position: absolute;
+    border: solid;
+    border-width: 1px;
+    margin-left: 0px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}

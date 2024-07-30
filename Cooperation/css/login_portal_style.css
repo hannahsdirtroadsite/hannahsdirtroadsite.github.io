@@ -1,0 +1,30 @@
+html {
+    height: 100%;
+    width: 100%;
+}
+
+button {
+    margin-left: 0;
+    width: 16ch;
+    height: 4ch;
+    float: center;
+}
+
+text {
+    white-space: pre-line;
+}
+
+td {
+    text-align: left;
+}
+
+label {
+    margin-top: 6px;
+}
+
+.faux_link {
+    color: lightskyblue;
+    font-family: arial;
+    font-size: 15px;
+    cursor: default;
+}

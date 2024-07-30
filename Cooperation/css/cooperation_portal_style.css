@@ -1,0 +1,48 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+button {
+  margin-left: 0;
+  width: 16ch;
+  height: 4ch;
+  float: center;
+}
+
+text {
+  white-space: pre-line;
+}
+
+td {
+  text-align: left;
+}
+
+label {
+  margin-top: 6px;
+  width: 100%;
+}
+
+.container {
+  margin: auto;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+}
+
+.container button {
+  width: 80%;
+}
+
+@media (min-width: 500px) {
+  .dataTables_length {
+    margin-top: 10px;
+    float: left;
+  }
+  
+  .dataTables_filter {
+    margin-top: 10px;
+    float: right;
+    margin-right: 4ch;
+  }
+}

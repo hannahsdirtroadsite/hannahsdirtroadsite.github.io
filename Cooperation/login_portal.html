@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Cooperation Database</title>
+    <link rel="icon" href="../global_images/DRRE_logo_icon.png" >
+    <link rel="apple-touch-icon" href="../global_images/DRRE_logo_icon.png">
+    <meta name="msapplication-TileImage" content="../global_images/DRRE_logo_icon.png">
+
+    <link href="css/login_portal_style.css" rel="stylesheet" type="text/css" />
+    <link href="css/modal_style.css" rel="stylesheet" type="text/css" />
+
+    <script src="js/loginOperations.js"></script>
+    <script src="js/resetOperations.js"></script>
+    <script src="js/apiOperations.js"></script>
+
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+    <link href="https://nightly.datatables.net/css/jquery.dataTables.css" rel="stylesheet" type="text/css" />
+    <script src="https://nightly.datatables.net/js/jquery.dataTables.js"></script>
+</head>
+
+<body>
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-content-grid">
+                <label for="username">Username: </label>
+                <input type="text" id="username" class="item">
+                <label for="password">Password: </label>
+                <input type="text" id="password" class="item"></input>
+            </div>
+            <br>
+            <div>
+                <button id="loginBtn" onclick="login()" class="center_btn">Login</button>
+            </div>
+            <br>
+            <text class="error" style="display: none" id="errorText">Username or Password Invalid</text>
+            <a id="forgot_password_link" onclick="recoverEmail()" class="center_btn faux_link">Forgot Password?</a>
+        </div>
+    </div>
+
+    <div id="recoverEmailModal" class="modal" style="display: none">
+        <div class="modal-content">
+            <div class="modal-content-grid">
+                <label for="recovery_username">Username: </label>
+                <input type="text" id="recovery_username" class="item">
+            </div>
+            <br>
+            <div>
+                <button id="recoverEmailBtn" onclick="getSecurityQuestion()" class="center_btn">Recover</button>
+            </div>
+            <br>
+            <text class="error" style="display: none" id="recoveryErrorText">Username Invalid</text>
+        </div>
+    </div>
+
+    <div id="recoveryQuestionModal" class="modal" style="display: none">
+        <div class="setup_modal modal-content">
+            <span class="close" id="close-modModal">&times;</span>
+            <br><br>
+            <div class="modal-content-grid">
+                <label for="recovery_question_username">Username: </label>
+                <input type="text" id="recovery_question_username" class="item read_only" readonly>
+
+                <label for="recovery_security_question">Security Question: </label>
+                <textarea id="recovery_security_question" class="item read_only" readonly></textarea>
+
+                <label for="recovery_security_question_answer">Security Answer: </label>
+                <input type="text" id="recovery_security_question_answer" class="item">
+            </div>
+            <br>
+            <text class="error" style="display: none" id="errorPass">Passwords Do Not Match</text>
+            <text class="error" style="display: none" id="errorSeq">Security Question and Answer Match</text>
+            <div>
+                <button id="setLoginBtn" onclick="resetPasswordSecurityQuestion()" class="center_btn">Set Password</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="setupModal" class="modal" style="display: none">
+        <div class="setup_modal modal-content">
+            <span class="close" id="close-modModal">&times;</span>
+            <br><br>
+            <div class="modal-content-grid">
+                <label for="setup_username">Username: </label>
+                <input type="text" id="setup_username" class="item">
+
+                <label for="setup_password">Password: </label>
+                <input type="text" id="setup_password" class="item">
+
+                <label for="confirm_password">Confirm Password: </label>
+                <input type="text" id="confirm_password" class="item"></input>
+
+                <label for="security_question">Security Question: </label>
+                <textarea id="security_question" class="item"></textarea>
+
+                <label for="security_question_answer">Security Answer: </label>
+                <input type="text" id="security_question_answer" class="item">
+            </div>
+            <br>
+            <text class="error" style="display: none" id="errorPass">Passwords Do Not Match</text>
+            <text class="error" style="display: none" id="errorSeq">Security Question and Answer Match</text>
+            <div>
+                <button id="setLoginBtn" onclick="setInformation()" class="center_btn">Set Password</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="recoveryModal" class="modal" style="display: none">
+        <div class="modal-content">
+            <span class="close" id="close-addModal">&times;</span>
+            <div>
+                <p id="ask_recovery_question"></p>
+            </div>
+            <br>
+            <div>
+                <label for="get_recovery_answer">Password: </label>
+                <input type="text" id="get_recovery_answer" class="item"></input>
+            </div>
+
+            <button id="recoveryBtn" onclick="login()">Login</button>
+        </div>
+    </div>
+
+</body>
+
+</html>

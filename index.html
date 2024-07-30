@@ -2,59 +2,273 @@
 <html>
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>replit</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
-  <script src="modalOps.js"></script>
-  <script src="addListing.js"></script>
-  <script src="getListing.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Home</title>
+    <link rel="icon" href="global_images/DRRE_logo_icon.png">
+    <link rel="apple-touch-icon" href="global_images/DRRE_logo_icon.png">
+    <meta name="msapplication-TileImage" content="global_images/DRRE_logo_icon.png">
+
+    <link href="Home/index_style.css" rel="stylesheet" type="text/css" />
+    <link href="header_footer_style.css" rel="stylesheet" type="text/css" />
+
+    <script src="Home/indexOperations.js"></script>
+
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:100' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:500' rel='stylesheet'>
+
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 </head>
 
-<body onload="getAllRecipes()">
-
-  <!-- modal for viewing recipes -->
-  <div id="fullModal" class="modal" style="display: none">>
-    <div class="modal-content">
-      <span class="close" id="close-fullModal">&times;</span>
-      <button id="addToListBtn" onclick="addToGroceryList()">Add to List</button>
-      <h3 id="titleText"></h3>
-      <text id="recipeText"></text>
-      <text id="ingredientsText" hidden></text>
-    </div>
-  </div>
-
-  <div id="addModal" class="modal" style="display: none">>
-    <div class="modal-content">
-      <span class="close" id="close-addModal">&times;</span>
-      <input type="text" id="title" class="item">
-      <textarea id="ingredients" class="item"></textarea>
-      <textarea id="steps" class="item"></textarea>
-      <button id="post" onclick="postRecipe()">Add Recipe</button>
-    </div>
-  </div>
-  <div class="container" id="recipesContainer">
-    <div id="controlBtns">
-      <button id="addRecipeBtn" onclick="openModal('addModal')">Add New</button>
-      <button id="seeListBtn" onclick="viewList()">View List</button>
-    </div>
-  </div>
-
-  <!-- modal for viewing list -->
-  <div id="listModal" class="modal" style="display: none">
-    <div class="modal-content" id="listModal-content">
-      <span class="close" id="close-listModal">&times;</span>
-      <div class="span-content" id="list-span">
-        <div class="span-content" id="btn-span">
-          <button id="backBtn" onclick="location.reload()">Back to Recipes</button>
-          <button id="clearChkBtn" onclick="clearChecked()">Clear Checked</button>
-          <button id="clearAllBtn" onclick="clearAll()">Clear All</button>
+<body>
+    <div class="header_menu">
+        <button class="menu_btn" onclick="toggleMenu()">
+            <img src="global_images/menu.png" alt="menu" class="menu_img" />
+        </button>
+        <div class="drop_down" id="header_drop_down">
+            <div class="tab_bar" id="tab_bar">
+                <button class="current_pg_btn tab_btn" onclick='window.location.href="index.html";'>Home</button>
+                <button class="other_pg_btn tab_btn" onclick='window.location.href="About/about.html";'>About</button>
+                <button class="other_pg_btn tab_btn"
+                    onclick='window.location.href="properties.html";'>Properties</button>
+                <button class="other_pg_btn tab_btn"
+                    onclick='window.location.href="Communities/communities.html";'>Communities</button>
+                <button class="other_pg_btn tab_btn"
+                    onclick='window.location.href="Cooperation/cooperation.html";'>Cooperation</button>
+                <button class="other_pg_btn tab_btn" onclick='window.location.href="blog.html";'>Blog</button>
+                <button class="other_pg_btn tab_btn" onclick='window.location.href="contact.html";'>Contact Us</button>
+            </div>
         </div>
-        <div id="list-content">
-        </div>
-      </div>
     </div>
-  </div>
+
+    <div class="content_grid">
+        <div class="main_col" onclick="hideAllPhotos()">
+            <div class="header">
+                <img src="global_images/DRRE_logo_full.jpg" class="header_image"
+                    alt="The Dirt Road Real Estate logo; a yellow jeep in a mountainous backdrop.">
+                <h1 class="header_text">Dirt Road Real Estate<br><strong>Home</strong></h1>
+            </div>
+
+            <hr>
+
+            <div>
+                <h1 class="content_header">Northwest Arizona Real Estate</h1>
+                <p class="content_paragraph">
+                    Dirt Road Real Estate is a full service residential and rural property specialist agency working in
+                    Northwestern Arizona, including the Kingman, Seligman, Wikieup, and Bullhead City areas, among
+                    others.
+                    Our team is happy to help both buyers and sellers find the perfect deal for their property or home.
+                </p>
+            </div>
+
+            <div>
+                <h1 class="content_header">Services Tailored To Our Area</h1>
+                <p class="content_paragraph">
+                    Our services include property showings, brokerage services, and knowledge of the area in a way that
+                    many more distantly located agents can't match.
+                    We can interface with inspectors, work with loan officers, and work with liability and insurance
+                    personnel.
+                    We have no requirements for a property that can be sold; we are willing to sell unimproved land.
+                    Some of our
+                    specialties include
+                    haul water properties, properties on septic, and properties on well water.
+                </p>
+            </div>
+
+            <div>
+                <h1 class="content_header">City Limits Are No Obstacle</h1>
+                <p class="content_paragraph">
+                    While Dirt Road does provide specialty services and advice relating to rural and unimproved
+                    properties,
+                    we are also qualified and experienced with real estate within town limits as well.
+                    If you are looking to buy or sell real estate in Arizona, get in touch with us today.
+                </p>
+            </div>
+        </div>
+
+        <div id="side_col" class="side_col">
+            <div class="scroll_container">
+                <img id="canyon_img" src="Home/images/canyon.jpg" class="scroll_image" onclick="showImage(this)"
+                    alt="The bottom of a basalt canyon looking up.">
+                <div class="scroll_container_full">
+                    <img id="canyon_img_large" src="Home/images/canyon.jpg" class="full_image full_image_show"
+                        onclick="hideImage(this)" name="0" alt="The bottom of a basalt canyon looking up.">
+                </div>
+            </div>
+
+            <div class="scroll_container">
+                <img id="hill_img" src="Home/images/hill.jpg" class="scroll_image" onclick="showImage(this)"
+                    alt="A view of a rolling hill during the dry season.">
+                <div class="scroll_container_full">
+                    <img id="hill_img_large" src="Home/images/hill.jpg" class="full_image full_image_hide"
+                        onclick="hideImage(this)" name="1" alt="A view of a rolling hill during the dry season.">
+                </div>
+            </div>
+
+            <div class="scroll_container">
+                <img id="juniper_img" src="Home/images/juniper.jpg" class="scroll_image" onclick="showImage(this)"
+                    alt="A view of a rolling hill with a juniper tree in the foreground.">
+                <div class="scroll_container_full">
+                    <img id="juniper_img_large" src="Home/images/juniper.jpg" class="full_image full_image_hide"
+                        onclick="hideImage(this)" name="2"
+                        alt="A view of a rolling hill with a juniper tree in the foreground.">
+                </div>
+            </div>
+
+            <div class="scroll_container">
+                <img id="mountain_img" src="Home/images/mountain.jpeg" class="scroll_image" onclick="showImage(this)"
+                    alt="Looking out over juniper trees with a mountain in the distace.">
+                <div class="scroll_container_full">
+                    <img id="mountain_img_large" src="Home/images/mountain.jpeg" class="full_image full_image_hide"
+                        onclick="hideImage(this)" name="3"
+                        alt="Looking out over juniper trees with a mountain in the distace.">
+                </div>
+            </div>
+
+            <div class="scroll_container">
+                <img id="pine_img" src="Home/images/pine.jpg" class="scroll_image" onclick="showImage(this)"
+                    alt="A mountain vista covered in pine trees.">
+                <div class="scroll_container_full">
+                    <img id="pine_img_large" src="Home/images/pine.jpg" class="full_image full_image_hide"
+                        onclick="hideImage(this)" name="4" alt="A mountain vista covered in pine trees.">
+                </div>
+            </div>
+
+            <div class="scroll_container">
+                <img id="sunset_img" src="Home/images/sunset.jpg" class="scroll_image" onclick="showImage(this)"
+                    alt="A beautiful sunset speckled with clouds.">
+                <div class="scroll_container_full">
+                    <img id="sunset_img_large" src="Home/images/sunset.jpg" class="full_image full_image_hide"
+                        onclick="hideImage(this)" name="5" alt="A beautiful sunset speckled with clouds.">
+                </div>
+            </div>
+
+            <div class="scroll_container">
+                <img id="windmill_img" src="Home/images/windmill.jpg" class="scroll_image" onclick="showImage(this)"
+                    alt="Looking out over a rolling plain with a mountain in the distace.">
+                <div class="scroll_container_full">
+                    <img id="windmill_img_large" src="Home/images/windmill.jpg" class="full_image full_image_hide"
+                        onclick="hideImage(this)" name="6"
+                        alt="Looking out over a rolling plain with a mountain in the distace.">
+                </div>
+            </div>
+
+            <div class="scroll_container">
+                <img id="elk_img" src="Home/images/elk.jpg" class="scroll_image" onclick="showImage(this)"
+                    alt="An elk grazing in front of a rustic lodge.">
+                <div class="scroll_container_full">
+                    <img id="elk_img_large" src="Home/images/elk.jpg" class="full_image full_image_hide"
+                        onclick="hideImage(this)" name="7" alt="An elk grazing in front of a rustic lodge.">
+                </div>
+            </div>
+
+            <div class="scroll_container">
+                <img id="flowers_img" src="Home/images/flowers.jpg" class="scroll_image" onclick="showImage(this)"
+                    alt="Cheerful yellow wildflowers with green centers.">
+                <div class="scroll_container_full">
+                    <img id="flowers_img_large" src="Home/images/flowers.jpg" class="full_image full_image_hide"
+                        onclick="hideImage(this)" name="8" alt="Cheerful yellow wildflowers with green centers.">
+                </div>
+            </div>
+
+            <div class="scroll_container">
+                <img id="horse_img" src="Home/images/horse.jpeg" class="scroll_image" onclick="showImage(this)"
+                    alt="A view of a mountain from horseback, with the horse's face in the foreground.">
+                <div class="scroll_container_full">
+                    <img id="horse_img_large" src="Home/images/horse.jpeg" class="full_image full_image_hide"
+                        onclick="hideImage(this)" name="9"
+                        alt="A view of a mountain from horseback, with the horse's face in the foreground.">
+                </div>
+            </div>
+
+            <div class="scroll_container">
+                <img id="living_room_img" src="Home/images/living_room.jpg" class="scroll_image"
+                    onclick="showImage(this)" alt="A large, airy living room with taxidermy on the walls.">
+                <div class="scroll_container_full">
+                    <img id="living_room_img_large" src="Home/images/living_room.jpg" class="full_image full_image_hide"
+                        onclick="hideImage(this)" name="10"
+                        alt="A large, airy living room with taxidermy on the walls.">
+                </div>
+            </div>
+
+            <div class="scroll_container">
+                <img id="lodge_twins_img" src="Home/images/lodge_twins.jpg" class="scroll_image"
+                    onclick="showImage(this)" alt="The inside of a cabin with two twin beds near a window.">
+                <div class="scroll_container_full">
+                    <img id="lodge_twins_img_large" src="Home/images/lodge_twins.jpg" class="full_image full_image_hide"
+                        onclick="hideImage(this)" name="11"
+                        alt="The inside of a cabin with two twin beds near a window.">
+                </div>
+            </div>
+
+            <div class="scroll_container">
+                <img id="steel_building_img" src="Home/images/steel_building.jpg" class="scroll_image"
+                    onclick="showImage(this)" alt="A steel building with a wrap around porch.">
+                <div class="scroll_container_full">
+                    <img id="steel_building_img_large" src="Home/images/steel_building.jpg"
+                        class="full_image full_image_hide" onclick="hideImage(this)" name="12"
+                        alt="A steel building with a wrap around porch.">
+                </div>
+            </div>
+
+            <div class="scroll_container">
+                <img id="dirt_img" src="Home/images/dirt.jpeg" class="scroll_image" onclick="showImage(this)"
+                    alt="Driving down a well-maintained dirt road.">
+                <div class="scroll_container_full">
+                    <img id="dirt_img_large" src="Home/images/dirt.jpeg" class="full_image full_image_hide"
+                        onclick="hideImage(this)" name="13" alt="Driving down a well-maintained dirt road.">
+                </div>
+            </div>
+
+            <div class="scroll_container">
+                <img id="canyon_cow_img" src="Home/images/canyon_cow.jpg" class="scroll_image" onclick="showImage(this)"
+                    alt="A cow rests lazily in front of a striking basalt formation.">
+                <div class="scroll_container_full">
+                    <img id="canyon_cow_img_large" src="Home/images/canyon_cow.jpg" class="full_image full_image_hide"
+                        onclick="hideImage(this)" name="14"
+                        alt="A cow rests lazily in front of a striking basalt formation.">
+                </div>
+            </div>
+
+
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="prevSlide()">&#10094;</a>
+            <a class="next" onclick="nextSlide()">&#10095;</a>
+
+            <!-- The dots/circles -->
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </div>
+    </div>
+
+    <br><br>
+
+    <hr>
+
+    <div id="footer" class="footer">
+        <img src="global_images/DRRE_logo_full.jpg" class="footer_logo"
+            alt="The Dirt Road Real Estate logo; a yellow jeep in a mountainous backdrop.">
+        <div>
+            <h3 class="footer-text">
+                Please contact us at:
+            </h3>
+            <div class="footer_contact footer-text">
+                <img src="global_images/email_icon.png" class="icon" />
+                <a class="footer-text" href="mailto:elise.harron@gmail.com">elise.harron@gmail.com</a>
+            </div>
+            <div class="footer_contact footer-text">
+                <img src="global_images/phone_icon.png" class="icon" />
+                <a class="footer-text" href="tel:928-897-1364">(928)897-1364</a>
+            </div>
+        </div>
+        <div>
+            <img src="global_images/MLS_EHS_logo.jpg" class="legal_image"
+                alt="The combined logos for the MLS and Equal Housing Opportunity." />
+        </div>
+    </div>
 </body>
 
 </html>
