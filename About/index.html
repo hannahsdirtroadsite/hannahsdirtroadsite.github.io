@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>About</title>
-  <link rel="icon" href="../global_images/DRRE_logo_icon.png" >
+  <link rel="icon" href="../global_images/DRRE_logo_icon.png">
   <link rel="apple-touch-icon" href="../global_images/DRRE_logo_icon.png">
   <meta name="msapplication-TileImage" content="../global_images/DRRE_logo_icon.png">
 
@@ -18,7 +18,37 @@
   <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 </head>
 
-<body>
+<script>
+  function toggleMenu() {
+    let dropDown = document.getElementById("header_drop_down");
+    if (dropDown.style.display == "none" || dropDown.style.display == '') {
+      dropDown.style.display = "block"
+    }
+    else {
+      dropDown.style.display = "none"
+    }
+  }
+
+  function toggleShowMore() {
+    let details = document.getElementsByTagName("details");
+    let summaries = document.getElementsByTagName("summary");
+    console.log('details and summaries: ')
+    if (window.screen.width > 600) {
+      for (let i = 0; i < details.length; i++) {
+        details[i].open = true;
+        summaries[i].style.visibility='hidden';
+      }
+    }
+    else {
+      for (let i = 0; i < details.length; i++) {
+        details[i].open = "";
+        summaries[i].style.visibility='visible';
+      }
+    }
+  }
+</script>
+
+<body onload="toggleShowMore()" onresize="toggleShowMore()">
   <div class="header_menu">
     <button class="menu_btn" onclick="toggleMenu()">
       <img src="../global_images/menu.png" alt="menu" class="menu_img" />
@@ -36,22 +66,13 @@
     </div>
   </div>
 
-  <script>
-    function toggleMenu() {
-      let dropDown = document.getElementById("header_drop_down");
-      if (dropDown.style.display == "none" || dropDown.style.display == '') {
-        dropDown.style.display = "block"
-      }
-      else {
-        dropDown.style.display = "none"
-      }
-    }
-  </script>
-
   <div class="header">
     <img src="../global_images/DRRE_logo_full.jpg" class="header_image"
       alt="The Dirt Road Real Estate logo; a yellow jeep in a mountainous backdrop.">
-    <h1 class="header_text">Dirt Road Real Estate<br><strong>About</strong></h1>
+      <div class="title_grid">
+        <p class="header_text company_text">Dirt Road Real Estate</p>
+        <p class="header_text page_text">About</p>
+      </div>
   </div>
 
   <hr>
@@ -65,33 +86,42 @@
         <div class="headers">
           <h1 class="info_header_left margin_header">Elise Harron</h1>
           <div class="contact_div">
-            <img src="../global_images/email_icon.png" class="icon" />
+            <img src="../global_images/skills_icon.png" class="contact_icon" />
+            <a class="info_header_left contact_info">Broker, Offroad Access, Offgrid Living</a>
+          </div>
+          <div class="contact_div">
+            <img src="../global_images/email_icon.png" class="contact_icon" />
             <a class="info_header_left contact_info" href="mailto:elise.harron@gmail.com">elise.harron@gmail.com</a>
           </div>
           <div class="contact_div">
-            <img src="../global_images/phone_icon.png" class="icon" />
+            <img src="../global_images/phone_icon.png" class="contact_icon" />
             <a class="info_header_left contact_info" href="tel:928-897-1364">(928)897-1364</a>
           </div>
+          <br>
         </div>
-
-        <br>
-
-        <p class="agent_bio">
-          I did not set out to become a rural land specialist… I realized that I <i>am</i> a Rural Land Specialist, and
-          then I
-          <i>became</i> a Realtor and, eventually, a Broker! I already understand the costs and hurdles of changing a
-          rural piece
-          of land into a homestead, a farm or an escape property, and I love it! I think everyone should live like I do,
-          so I'm the
-          right person to talk to about rural property adventures.
-          <br><br>
-          I prefer to work East of Kingman, West of Ashfork, and North of Wikieup, but for some, I'll go to the fringes
-          of
-          the DRRE preferred areas.
-          <br><br>
-          When someone tells you that "it can't be done" (in regards to rural properties or financing for off-grid) I am
-          who you should be talking to: I can get-'er-dun!
-        </p>
+        <details>
+          <summary class="section_header more_info">More Information</summary>
+          <p class="agent_bio">
+            I did not set out to become a rural land specialist… I realized that I <i>am</i> a Rural Land Specialist,
+            and
+            then I
+            <i>became</i> a Realtor and, eventually, a Broker! I already understand the costs and hurdles of changing a
+            rural piece
+            of land into a homestead, a farm or an escape property, and I love it! I think everyone should live like I
+            do,
+            so I'm the
+            right person to talk to about rural property adventures.
+            <br><br>
+            I prefer to work East of Kingman, West of Ashfork, and North of Wikieup, but for some, I'll go to the
+            fringes
+            of
+            the DRRE preferred areas.
+            <br><br>
+            When someone tells you that "it can't be done" (in regards to rural properties or financing for off-grid) I
+            am
+            who you should be talking to: I can get-'er-dun!
+          </p>
+        </details>
       </div>
     </div>
 
@@ -108,7 +138,7 @@
         <div class="headers">
           <h1 class="info_header_left margin_header">Sean Harron</h1>
           <div class="contact_div">
-            <img src="../global_images/phone_icon.png" class="icon" />
+            <img src="../global_images/phone_icon.png" class="contact_icon" />
             <a class="info_header_left contact_info" href="tel:928-715-2224">(928)715-2224</a>
           </div>
         </div>
@@ -141,11 +171,11 @@
         <div class="headers">
           <h1 class="info_header_left margin_header">Cheryl Robertson</h1>
           <div class="contact_div">
-            <img src="../global_images/email_icon.png" class="icon" />
+            <img src="../global_images/email_icon.png" class="contact_icon" />
             <a class="info_header_left contact_info" href="mailto:cheryl@azruralhomes.com">cheryl@azruralhomes.com</a>
           </div>
           <div class="contact_div">
-            <img src="../global_images/phone_icon.png" class="icon" />
+            <img src="../global_images/phone_icon.png" class="contact_icon" />
             <a class="info_header_left contact_info" href="tel:928-716-4048">(928)716-4048</a>
           </div>
         </div>
@@ -192,7 +222,7 @@
         <div class="headers">
           <h1 class="info_header_left margin_header">Janay Richardson</h1>
           <div class="contact_div">
-            <img src="../global_images/email_icon.png" class="icon" />
+            <img src="../global_images/email_icon.png" class="contact_icon" />
             <a class="info_header_left contact_info"
               href="mailto:RichardsonJanay2@gmail.com">RichardsonJanay2@gmail.com</a>
           </div>
@@ -235,7 +265,7 @@
         <div class="headers">
           <h1 class="info_header_left margin_header">Fred Richardson</h1>
           <div class="contact_div">
-            <img src="../global_images/phone_icon.png" class="icon" />
+            <img src="../global_images/phone_icon.png" class="contact_icon" />
             <a class="info_header_left contact_info" href="tel:702-525-4348">(702)525-4348</a>
           </div>
         </div>
@@ -273,7 +303,7 @@
         <div class="headers">
           <h1 class="info_header_left margin_header">Leann Smith</h1>
           <div class="contact_div">
-            <img src="../global_images/phone_icon.png" class="icon" />
+            <img src="../global_images/phone_icon.png" class="contact_icon" />
             <a class="info_header_left contact_info" href="tel:928-249-4053">(928)249-4053</a>
           </div>
         </div>
@@ -313,11 +343,11 @@
         <div class="headers">
           <h1 class="info_header_left margin_header">Sarah Foltyn</h1>
           <div class="contact_div">
-            <img src="../global_images/email_icon.png" class="icon" />
+            <img src="../global_images/email_icon.png" class="contact_icon" />
             <a class="info_header_left contact_info" href="mailto:sarahfoltyn.az@gmail.com">sarahfoltyn.az@gmail.com</a>
           </div>
           <div class="contact_div">
-            <img src="../global_images/phone_icon.png" class="icon" />
+            <img src="../global_images/phone_icon.png" class="contact_icon" />
             <a class="info_header_left contact_info" href="tel:928-715-7885">(928)715-7885</a>
           </div>
         </div>
@@ -349,7 +379,7 @@
         <div class="headers">
           <h1 class="info_header_left margin_header">Debra Stockton</h1>
           <div class="contact_div">
-            <img src="../global_images/email_icon.png" class="icon" />
+            <img src="../global_images/email_icon.png" class="contact_icon" />
             <a class="info_header_left contact_info" href="mailto:debsellsmcaz@gmail.com">debsellsmcaz@gmail.com</a>
           </div>
         </div>
@@ -382,7 +412,7 @@
         <div class="headers">
           <h1 class="info_header_left margin_header">Lyndzi Stockton</h1>
           <div class="contact_div">
-            <img src="../global_images/email_icon.png" class="icon" />
+            <img src="../global_images/email_icon.png" class="contact_icon" />
             <a class="info_header_left contact_info"
               href="mailto:lyndzisellsdirtaz@gmail.com">lyndzisellsdirtaz@gmail.com</a>
           </div>
@@ -419,7 +449,7 @@
         <div class="headers">
           <h1 class="info_header_left margin_header">Ann Buckner</h1>
           <div class="contact_div">
-            <img src="../global_images/email_icon.png" class="icon" />
+            <img src="../global_images/email_icon.png" class="contact_icon" />
             <a class="info_header_left contact_info" href="mailto:annbcknr@gmail.com">annbcknr@gmail.com</a>
           </div>
         </div>
@@ -451,13 +481,13 @@
       <h3 class="footer-text">
         Please contact us at:
       </h3>
-      <div class="footer_contact footer-text">
-        <img src="../global_images/email_icon.png" class="icon" />
-        <a class="footer-text" href="mailto:elise.harron@gmail.com">elise.harron@gmail.com</a>
+      <div class="contact_div">
+        <img src="../global_images/email_icon.png" class="contact_icon" />
+        <a class="contact_info" href="mailto:cheryl@azruralhomes.com">cheryl@azruralhomes.com</a>
       </div>
-      <div class="footer_contact footer-text">
-        <img src="../global_images/phone_icon.png" class="icon" />
-        <a class="footer-text" href="tel:928-897-1364">(928)897-1364</a>
+      <div class="contact_div">
+        <img src="../global_images/phone_icon.png" class="contact_icon" />
+        <a class="contact_info" href="tel:928-716-4048">(928)716-4048</a>
       </div>
     </div>
     <div>

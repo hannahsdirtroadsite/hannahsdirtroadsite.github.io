@@ -23,30 +23,12 @@
     .info_header_left {
         color: var(--DRRE_red);
     }
-
-    .contact_info {
-        font-size: 15px;
-        text-decoration: none;
-        width: max-content;
-        background-color: white;
-        margin: auto;
-        margin-left: 0;
-    }
     
     .agent_bio {
         text-align: justify;
         margin: auto;
     }
 
-    .icon {
-        margin: auto;
-        float: right;
-    }
-
-    .contact_div {
-        display: flex;
-        margin-left: auto;
-    }
 }
 
 @media (min-width: 600px) {
@@ -61,11 +43,6 @@
         float: right;
         margin: 5vw;
     }
-
-    .contact_info {
-        font-size: 25px;
-        text-decoration: none;
-    }
     
     .agent_bio {
         text-align: justify;
@@ -75,12 +52,6 @@
     .info_header_left {
         color: var(--DRRE_red);
         text-align: left;
-    }
-
-    .contact_div {
-        display: grid;
-        grid-template-columns: 1fr 10fr;
-        align-items: center;
     }
 }
 
@@ -94,6 +65,11 @@
     margin-top: 5vw;
 }
 
-.icon {
-    width: 25px;
+summary {
+    font-family: 'Montserrat';
+    font-weight: 900;
+    color: var(--DRRE_red);
+    font-size: calc(15px + .5vw);
+    width: max-content;
+    margin: auto;
 }
