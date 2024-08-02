@@ -31,16 +31,14 @@ function toggleElements(element) {
 }
 
 window.onload = function() {
-    console.log("test load")
     document.getElementById('contact_form').addEventListener('submit', function(event) {
         event.preventDefault();
-        console.log('sending')
         // these IDs from the previous steps
         emailjs.sendForm('service_8r8dc1k', 'template_poy4uku', this)
             .then(() => {
-                console.log('SUCCESS!');
+                console.log('send SUCCESS!');
             }, (error) => {
-                console.log('FAILED...', error);
+                console.log('send FAILED...', error);
             });
     });
 }
