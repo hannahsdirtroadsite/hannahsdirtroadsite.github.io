@@ -34,6 +34,28 @@ label {
   width: 80%;
 }
 
+.controlBtns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  margin: auto;
+
+  box-shadow: none;
+}
+
+.control_btn {
+  margin: auto;
+  border-radius: 10px;
+}
+
+.new_btn {
+  background-color: greenyellow;
+}
+
+.logout_btn {
+  background-color:red;
+}
+
 @media (min-width: 500px) {
   .dataTables_length {
     margin-top: 10px;

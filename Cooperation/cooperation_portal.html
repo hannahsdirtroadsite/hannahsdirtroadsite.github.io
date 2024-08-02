@@ -5,10 +5,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>Cooperation Database</title>
-  <link rel="icon" href="../global_images/DRRE_logo_icon.png" >
+  <link rel="icon" href="../global_images/DRRE_logo_icon.png">
   <link rel="apple-touch-icon" href="../global_images/DRRE_logo_icon.png">
   <meta name="msapplication-TileImage" content="../global_images/DRRE_logo_icon.png">
-  
+
   <link href="css/cooperation_portal_style.css" rel="stylesheet" type="text/css" />
   <link href="css/modal_style.css" rel="stylesheet" type="text/css" />
 
@@ -21,7 +21,7 @@
   <script src="https://nightly.datatables.net/js/jquery.dataTables.js"></script>
 </head>
 
-<body onload="getAllListings()">
+<body class="getAllListings()">
   <div id="addModal" class="modal" style="display: none">
     <div class="modal-content">
       <span class="close" id="close-addModal">&times;</span>
@@ -89,34 +89,35 @@
   </div>
 
   <div class="container" id="recipesContainer">
-    <div id="controlBtns">
-      <button id="addListingBtn" onclick="openModal('addModal')">Add New</button>
-      <table id="listingsTable" class="display" style="width:100%">
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Address</th>
-            <th>MLS Number</th>
-            <th>Pricing</th>
-            <th>Status</th>
-            <th>Last Updated</th>
-            <th>Change Log</th>
-          </tr>
-        </thead>
-
-        <tfoot>
-          <tr>
-            <th>ID</th>
-            <th>Address</th>
-            <th>MLS Number</th>
-            <th>Pricing</th>
-            <th>Status</th>
-            <th>Last Updated</th>
-            <th>Change Log</th>
-          </tr>
-        </tfoot>
-      </table>
+    <div class="controlBtns">
+      <button class="control_btn new_btn" onclick="openModal('addModal')">Add New</button>
+      <button class="control_btn logout_btn" onclick="logout()">Logout</button>
     </div>
+    <table id="listingsTable" class="display" style="width:100%">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Address</th>
+          <th>MLS Number</th>
+          <th>Pricing</th>
+          <th>Status</th>
+          <th>Last Updated</th>
+          <th>Change Log</th>
+        </tr>
+      </thead>
+
+      <tfoot>
+        <tr>
+          <th>ID</th>
+          <th>Address</th>
+          <th>MLS Number</th>
+          <th>Pricing</th>
+          <th>Status</th>
+          <th>Last Updated</th>
+          <th>Change Log</th>
+        </tr>
+      </tfoot>
+    </table>
   </div>
 </body>
 

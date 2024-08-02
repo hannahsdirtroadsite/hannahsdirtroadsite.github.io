@@ -9,8 +9,13 @@
   <link rel="apple-touch-icon" href="../global_images/DRRE_logo_icon.png">
   <meta name="msapplication-TileImage" content="../global_images/DRRE_logo_icon.png">
 
-  <link href="communities_style.css" rel="stylesheet" type="text/css" />
+  <link href="contact_style.css" rel="stylesheet" type="text/css" />
   <link href="../header_footer_style.css" rel="stylesheet" type="text/css" />
+
+  <script src="contactOperations.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+  <script type="text/javascript">(function () { emailjs.init("3PfDuc9HWRGu99vNn"); })();</script>
+
 
   <link href='https://fonts.googleapis.com/css?family=Montserrat:100' rel='stylesheet'>
   <link href='https://fonts.googleapis.com/css?family=Montserrat:500' rel='stylesheet'>
@@ -18,7 +23,7 @@
   <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 </head>
 
-<body>
+<body onload="initEmailJS()">
   <div class="header_menu">
     <button class="menu_btn" onclick="toggleMenu()">
       <img src="../global_images/menu.png" alt="menu" class="menu_img" />
@@ -31,29 +36,17 @@
         <button class="other_pg_btn tab_btn" onclick='window.location.href="../Communities/";'>Communities</button>
         <button class="other_pg_btn tab_btn" onclick='window.location.href="../Cooperation/";'>Cooperation</button>
         <button class="other_pg_btn tab_btn" onclick='window.location.href="../Blog/";'>Blog</button>
-        <button class="current_pg_btn tab_btn" onclick='window.location.href="../Contact/";'>Contact Us</button>>
+        <button class="current_pg_btn tab_btn" onclick='window.location.href="../Contact/";'>Contact Us</button>
       </div>
     </div>
   </div>
-
-  <script>
-    function toggleMenu() {
-      let dropDown = document.getElementById("header_drop_down");
-      if (dropDown.style.display == "none" || dropDown.style.display == '') {
-        dropDown.style.display = "block"
-      }
-      else {
-        dropDown.style.display = "none"
-      }
-    }
-  </script>
 
   <div class="header">
     <img src="../global_images/DRRE_logo_full.jpg" class="header_image"
       alt="The Dirt Road Real Estate logo; a yellow jeep in a mountainous backdrop.">
     <div class="title_grid">
       <p class="header_text company_text">Dirt Road Real Estate</p>
-      <p class="header_text page_text">Contact</p>
+      <p class="header_text page_text">Contact Us</p>
     </div>
   </div>
 
@@ -61,6 +54,148 @@
 
   <div class="content">
 
+    <div class="intro_section">
+      <img class="intro_img" src="images/pine_lake.jpg">
+      <p class="section_header left_header">We Are Happy To Assist You!</p>
+      <p class="intro">
+        At Dirt Road Real Estate we do not operate “teams” as you have had referenced in other real estate firms, we
+        <i>are</i> a
+        team, all of us. If one of us suggests that another team member should be helping you, that means that person
+        feels that they are the expert in that area and they want you to get the very best expert assistance that DRRE
+        can
+        give you.
+        <br><br>
+        Because of our expertise we stay very busy so often times to get into our schedule you may need to
+        schedule weeks ahead. We are typically not able to take “oh by the way” today service because much of what we
+        may
+        want to see/show needs to be mapped, scheduled and planned with the sellers. Please the moment you have even a
+        tentative schedule reach out and tentatively schedule with us; we'd rather have the time saved 'just in case'
+        and
+        have
+        to cancel/postpone than have you show up and not have the time or preparation to properly serve your needs.
+        This applies especially to customers who need to travel!
+      </p>
+    </div>
+
+    <br>
+
+    <div class="map_bg">
+      <br>
+      <h1 class="section_header center_header">Our Coverage Area</h1>
+      <div class="main_map">
+        <img id="road_large" class="show_me large_map" src="images/maps/road.png"
+          alt="a road map of Northwest Arizona with Dirt Road Real Estate's range highlighted.">
+        <img id="topo_large" class="hide_me large_map" src="images/maps/topo.png"
+          alt="a topographic map of Northwest Arizona with Dirt Road Real Estate's range highlighted.">
+        <img id="regions_large" class="hide_me large_map" src="images/maps/regions.png"
+          alt="an ecological region map of Northwest Arizona with Dirt Road Real Estate's range highlighted.">
+        <img id="precip_large" class="hide_me large_map" src="images/maps/precip.png"
+          alt="an average precipitation map of Northwest Arizona with Dirt Road Real Estate's range highlighted.">
+        <img id="aquifers_large" class="hide_me large_map" src="images/maps/aquifers.png"
+          alt="an aquifer map of Northwest Arizona with Dirt Road Real Estate's range highlighted.">
+        <img id="ecoregions_large" class="hide_me large_map" src="images/maps/ecoregions.png"
+          alt="a biome map of Northwest Arizona with Dirt Road Real Estate's range highlighted.">
+        <img id="geo_large" class="hide_me large_map" src="images/maps/geo.png"
+          alt="a geological map of Northwest Arizona with Dirt Road Real Estate's range highlighted.">
+        <img id="management_large" class="hide_me large_map" src="images/maps/management.png"
+          alt="a land management map of Northwest Arizona with Dirt Road Real Estate's range highlighted.">
+        <div class="display_info">
+          <p id="road_key" class="show_me">
+            To the right is a road map with Dirt Road Real Estate's range highlighted. We are happy to sell properties
+            from Lake Mead down to Kingman, and across to Ash Fork and Wikieup. Click on one of the thumbnails below to
+            see different maps with our range highlighted.
+          </p>
+          <p id="topo_key" class="hide_me">
+            The geography of Northwest Arizona begins at around sea level at the Colorado River in the west, and then
+            starts sloping gently upward the further east you go. Kingman, AZ, is 3,300 feet high. Ash Fork is around
+            5,00 feet high. The desert floor in the west offers temperate winters with slightly warmer summers, while
+            the mountains in the east offer beautiful views, temperate summers, and some snow in the winter. There's
+            something for everyone!
+          </p>
+          <img id="regions_key" class="hide_me key_img" alt="a color key for the regions map"
+            src="images/maps/regions_key.png" />
+          <img id="precip_key" class="hide_me key_img" alt="a color key for the precipitation map"
+            src="images/maps/precip_key.png" />
+          <img id="aquifers_key" class="hide_me key_img" alt="a color key for the aquifers map"
+            src="images/maps/aquifers_key.png" />
+          <img id="ecoregions_key" class="hide_me key_img" alt="a color key for the biome map"
+            src="images/maps/ecoregions_key.png" />
+          <img id="geo_key" class="hide_me key_img" alt="a color key for the geological map"
+            src="images/maps/geo_key.png" />
+          <img id="management_key" class="hide_me key_img" alt="a color key for the management map"
+            src="images/maps/management_key.png" />
+        </div>
+      </div>
+      <div class="sources">
+        <a id="road_source" class="show_me map_source" target="_blank" rel="noopener noreferrer"
+          href="https://gisgeography.com/arizona-map/">Map Source</a>
+        <a id="topo_source" class="hide_me map_source" target="_blank" rel="noopener noreferrer"
+          href="https://www.usgs.gov/media/images/map-arizona-shaded-relief">Map Source</a>
+        <a id="regions_source" class="hide_me map_source" target="_blank" rel="noopener noreferrer"
+          href="https://www.epa.gov/eco-research/ecoregion-download-files-state-region-9">Map Source</a>
+        <a id="precip_source" class="hide_me map_source" target="_blank" rel="noopener noreferrer"
+          href="https://wrrc.arizona.edu/resources/arizona-water-map-poster">Map Source</a>
+        <a id="aquifers_source" class="hide_me map_source" target="_blank" rel="noopener noreferrer"
+          href="https://www.usgs.gov/media/images/aquifers-map-principal-aquifers-united-states">Map Source</a>
+        <a id="ecoregions_source" class="hide_me map_source" target="_blank" rel="noopener noreferrer"
+          href="https://www.epa.gov/eco-research/ecoregion-download-files-state-region-9">Map Source</a>
+        <a id="geo_source" class="hide_me map_source" target="_blank" rel="noopener noreferrer"
+          href="https://geomapaz.azgs.arizona.edu/">Map Source</a>
+        <a id="management_source" class="hide_me map_source" target="_blank" rel="noopener noreferrer"
+          href="https://land.az.gov/maps-gis">Map Source</a>
+      </div>
+
+      <div class="map_scroll_div">
+        <div class="map_scroll">
+          <img id="road" class="scroll_img select_img" onclick="changeMap(this)" src="images/maps/road.png"
+            alt="a road map of Northwest Arizona with Dirt Road Real Estate's range highlighted.">
+          <img id="topo" class="scroll_img" onclick="changeMap(this)" src="images/maps/topo.png"
+            alt="a topographic map of Northwest Arizona with Dirt Road Real Estate's range highlighted.">
+          <img id="regions" class="scroll_img" onclick="changeMap(this)" src="images/maps/regions.png"
+            alt="an ecological region map of Northwest Arizona with Dirt Road Real Estate's range highlighted.">
+          <img id="precip" class="scroll_img" onclick="changeMap(this)" src="images/maps/precip.png"
+            alt="an average precipitation map of Northwest Arizona with Dirt Road Real Estate's range highlighted.">
+          <img id="aquifers" class="scroll_img" onclick="changeMap(this)" src="images/maps/aquifers.png"
+            alt="an aquifer map of Northwest Arizona with Dirt Road Real Estate's range highlighted.">
+          <img id="ecoregions" class="scroll_img" onclick="changeMap(this)" src="images/maps/ecoregions.png"
+            alt="a biome map of Northwest Arizona with Dirt Road Real Estate's range highlighted.">
+          <img id="geo" class="scroll_img" onclick="changeMap(this)" src="images/maps/geo.png"
+            alt="a geological map of Northwest Arizona with Dirt Road Real Estate's range highlighted.">
+          <img id="management" class="scroll_img" onclick="changeMap(this)" src="images/maps/management.png"
+            alt="a land management map of Northwest Arizona with Dirt Road Real Estate's range highlighted.">
+        </div>
+      </div>
+    </div>
+
+    <div class="email_div">
+      <h1 class="section_header center_header">Have a question? <br>Send us an email today!</h1>
+      <form id="contact-form" class="email_form">
+        <label class="input_label">Name:</label>
+        <input type="text" name="user_name" class="input_text">
+        <label class="input_label">Email:</label>
+        <input type="email" name="user_email" class="input_text">
+        <label class="input_label">Message:</label>
+        <textarea name="message" class="input_area"></textarea>
+        <input type="hidden" name="contact_number" value="697483">
+        <br>
+        <input type="submit" value="Send" class="submit_email" onsubmit="sendEmail()">
+      </form>
+    </div>
+
+    <div class="review_div">
+      <h1 class="section_header center_header mobile_size">Satisfied with your service? <br>Don't forget to leave a
+        review!</h1>
+      <div class="btn_div">
+        <a id="zillow_review" class="review_btn" target="_blank" rel="noopener noreferrer"
+          href="https://www.zillow.com/profile/Elise-Harron#reviews"><img class="btn_img"
+            src="images/zillow_logo.png"></a>
+        <a id="yelp_review" class="review_btn" target="_blank" rel="noopener noreferrer"
+          href="https://www.yelp.com/biz/elise-harron-dirt-road-real-estate-prescott"><img class="btn_img"
+            src="images/yelp_logo.png"></a>
+      </div>
+      <h1 class="section_header center_header full_size">Satisfied with your service? <br>Don't forget to leave a
+        review!</h1>
+    </div>
   </div>
 
   <hr>
@@ -75,11 +210,11 @@
       </h3>
       <div class="contact_div">
         <img src="../global_images/email_icon.png" class="contact_icon" />
-        <a class="contact_info" href="mailto:cheryl@azruralhomes.com">cheryl@azruralhomes.com</a>
+        <a class="info_header_left contact_info" href="mailto:elise.harron@gmail.com">elise.harron@gmail.com</a>
       </div>
       <div class="contact_div">
         <img src="../global_images/phone_icon.png" class="contact_icon" />
-        <a class="contact_info" href="tel:928-716-4048">(928)716-4048</a>
+        <a class="info_header_left contact_info" href="tel:928-897-1364">(928)897-1364</a>
       </div>
     </div>
     <div>
