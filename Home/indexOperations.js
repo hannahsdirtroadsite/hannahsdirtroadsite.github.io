@@ -51,13 +51,3 @@ function prevSlide() {
     nextElement.classList.add("full_image_show");
     nextElement.classList.remove("full_image_hide")
 }
-
-function sendEmail() {
-    console.log("sending")
-    emailjs.sendForm('service_8r8dc1k', '#contact_form', 'template_poy4uku')
-      .then(() => {
-        console.log('SUCCESS!');
-      }, (error) => {
-        console.log('FAILED...', error);
-      });
-  }
