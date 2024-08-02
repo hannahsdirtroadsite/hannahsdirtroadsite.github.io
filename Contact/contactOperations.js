@@ -29,3 +29,18 @@ function toggleElements(element) {
     element.classList.toggle("show_me")
     element.classList.toggle("hide_me")
 }
+
+window.onload = function() {
+    console.log("test load")
+    document.getElementById('contact_form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        console.log('sending')
+        // these IDs from the previous steps
+        emailjs.sendForm('service_8r8dc1k', 'template_poy4uku', this)
+            .then(() => {
+                console.log('SUCCESS!');
+            }, (error) => {
+                console.log('FAILED...', error);
+            });
+    });
+}

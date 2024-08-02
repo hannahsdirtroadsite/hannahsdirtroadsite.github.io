@@ -13,17 +13,19 @@
   <link href="../header_footer_style.css" rel="stylesheet" type="text/css" />
 
   <script src="contactOperations.js"></script>
+
+  <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+  <script src='https://widgets.sociablekit.com/zillow-reviews/widget.js' async defer></script>
+
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
   <script type="text/javascript">(function () { emailjs.init("3PfDuc9HWRGu99vNn"); })();</script>
 
-
   <link href='https://fonts.googleapis.com/css?family=Montserrat:100' rel='stylesheet'>
   <link href='https://fonts.googleapis.com/css?family=Montserrat:500' rel='stylesheet'>
-
-  <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 </head>
 
-<body onload="initEmailJS()">
+<body>
   <div class="header_menu">
     <button class="menu_btn" onclick="toggleMenu()">
       <img src="../global_images/menu.png" alt="menu" class="menu_img" />
@@ -108,8 +110,8 @@
           <p id="topo_key" class="hide_me">
             The geography of Northwest Arizona begins at around sea level at the Colorado River in the west, and then
             starts sloping gently upward the further east you go. Kingman, AZ, is 3,300 feet high. Ash Fork is around
-            5,00 feet high. The desert floor in the west offers temperate winters with slightly warmer summers, while
-            the mountains in the east offer beautiful views, temperate summers, and some snow in the winter. There's
+            5,000 feet high. The desert floor in the west offers temperate winters with slightly warmer summers, while
+            the mountains in the east offer temperate summers and light, occasional snow in the winter. There's
             something for everyone!
           </p>
           <img id="regions_key" class="hide_me key_img" alt="a color key for the regions map"
@@ -169,7 +171,7 @@
 
     <div class="email_div">
       <h1 class="section_header center_header">Have a question? <br>Send us an email today!</h1>
-      <form id="contact-form" class="email_form">
+      <form id="contact_form" class="email_form">
         <label class="input_label">Name:</label>
         <input type="text" name="user_name" class="input_text">
         <label class="input_label">Email:</label>
@@ -178,24 +180,21 @@
         <textarea name="message" class="input_area"></textarea>
         <input type="hidden" name="contact_number" value="697483">
         <br>
-        <input type="submit" value="Send" class="submit_email" onsubmit="sendEmail()">
+        <input type="submit" value="Send" class="submit_email">
       </form>
     </div>
 
     <div class="review_div">
-      <h1 class="section_header center_header mobile_size">Satisfied with your service? <br>Don't forget to leave a
-        review!</h1>
       <div class="btn_div">
+        <h1 class="section_header review_header">Satisfied with your service? <br>Don't forget to leave a
+          review!<br></h1>
         <a id="zillow_review" class="review_btn" target="_blank" rel="noopener noreferrer"
           href="https://www.zillow.com/profile/Elise-Harron#reviews"><img class="btn_img"
             src="images/zillow_logo.png"></a>
-        <a id="yelp_review" class="review_btn" target="_blank" rel="noopener noreferrer"
-          href="https://www.yelp.com/biz/elise-harron-dirt-road-real-estate-prescott"><img class="btn_img"
-            src="images/yelp_logo.png"></a>
       </div>
-      <h1 class="section_header center_header full_size">Satisfied with your service? <br>Don't forget to leave a
-        review!</h1>
+      <h1 class="section_header review_header">Here's what previous customers have to say:</h1>
     </div>
+    <div class='sk-ww-zillow-reviews' data-embed-id='25445224'></div>
   </div>
 
   <hr>
