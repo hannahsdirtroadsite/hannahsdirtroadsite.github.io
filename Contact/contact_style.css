@@ -1,13 +1,15 @@
 html {
     height: 100%;
     width: 100%;
-    padding: 0;
+    padding-right: 0;
+    padding-left: 0;
 }
 
 body {
     height: max-content;
     width: 100%;
-    padding: 0;
+    padding-right: 0;
+    padding-left: 0;
     margin: 0;
 }
 
