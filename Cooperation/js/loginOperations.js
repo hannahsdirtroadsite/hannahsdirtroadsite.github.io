@@ -120,8 +120,3 @@ function decode(key, message) {
 
   return output;
 }
-
-function logout() {
-  localStorage.clear();
-  window.location.href="../";
-}

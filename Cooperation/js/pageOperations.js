@@ -154,3 +154,8 @@ async function authenticateToken(username, token) {
     localStorage.setItem('coopToken', resJson['token']);
   }
 }
+
+function logout() {
+  localStorage.clear();
+  window.location.href="../";
+}
