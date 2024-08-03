@@ -1,7 +1,7 @@
 
 function toggleMenu() {
     let dropDown = document.getElementById("header_drop_down");
-    if (dropDown.style.display = "none" || dropDown.style.display == '') {
+    if (dropDown.style.display == "none" || dropDown.style.display == '') {
         dropDown.style.display = "block"
     }
     else {

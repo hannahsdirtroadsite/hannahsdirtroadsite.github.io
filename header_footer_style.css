@@ -70,10 +70,26 @@ hr {
         justify-content: center;
     }
 
-    .header_image {
-        width: 100px;
+    .photo_div {
+        position: relative;
+        overflow: hidden;
+        height: 20vh;
+
+    }
+    
+    .header_image_mobile {
+        position: absolute;
+        top: -9999px;
+        bottom: -9999px;
+        left: -9999px;
+        right: -9999px;
         margin: auto;
-        margin-top: 3.5vh;
+    
+        height: 20vh;
+    }
+
+    .header_image_full {
+        display: none;
     }
 
     .header_text {
@@ -182,8 +198,12 @@ hr {
         display: grid;
         grid-template-columns: 1fr 8fr;
     }
+    
+    .header_image_mobile {
+        display: none;
+    }
 
-    .header_image {
+    .header_image_full {
         width: 15vw;
         margin-top: 3.5vh;
         margin-left: 3.5vh;

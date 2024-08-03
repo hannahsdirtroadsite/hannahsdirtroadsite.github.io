@@ -20,6 +20,7 @@ function changeMap(element) {
     }
 
     //show new elements
+    toggleElements(document.getElementById(element.id + "_header"))
     toggleElements(document.getElementById(element.id + "_large"))
     toggleElements(document.getElementById(element.id + "_key"))
     toggleElements(document.getElementById(element.id + "_source"))

@@ -32,7 +32,7 @@
   function toggleShowMore() {
     let details = document.getElementsByTagName("details");
     let summaries = document.getElementsByTagName("summary");
-    console.log('details and summaries: ')
+
     if (window.screen.width > 600) {
       for (let i = 0; i < details.length; i++) {
         details[i].open = true;
@@ -67,8 +67,12 @@
   </div>
 
   <div class="header">
-    <img src="../global_images/DRRE_logo_full.jpg" class="header_image"
-      alt="The Dirt Road Real Estate logo; a yellow jeep in a mountainous backdrop.">
+    <div class="photo_div">
+      <img src="../global_images/DRRE_logo_wide.png" class="header_image_mobile"
+        alt="The Dirt Road Real Estate logo; a yellow jeep in a mountainous backdrop.">
+      <img src="../global_images/DRRE_logo_full_clear.png" class="header_image_full"
+        alt="The Dirt Road Real Estate logo; a yellow jeep in a mountainous backdrop.">
+    </div>
     <div class="title_grid">
       <p class="header_text company_text">Dirt Road Real Estate</p>
       <p class="header_text page_text">About</p>
@@ -302,12 +306,12 @@
 
     <div>
       <div>
-        <img class="agent_photo_right" src="images/leann_smith.jpeg" />
+        <img class="agent_photo_right" src="images/leanne_smith.jpeg" />
       </div>
       <div class="info_bio">
 
         <div class="headers">
-          <h1 class="info_header_left margin_header">Leann Smith</h1>
+          <h1 class="info_header_left margin_header">Leanne Smith</h1>
           <div class="contact_div">
             <img src="../global_images/phone_icon.png" class="contact_icon" />
             <a class="info_header_left contact_info" href="tel:928-249-4053">(928)249-4053</a>
@@ -486,7 +490,7 @@
 
   <br><br>
   <div id="footer" class="footer">
-    <img src="../global_images/DRRE_logo_full.jpg" class="footer_logo"
+    <img src="../global_images/DRRE_logo_full_clear.png" class="footer_logo"
       alt="The Dirt Road Real Estate logo; a yellow jeep in a mountainous backdrop.">
     <div>
       <h3 class="footer-text">
