@@ -21,8 +21,9 @@
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
   <script type="text/javascript">(function () { emailjs.init("3PfDuc9HWRGu99vNn"); })();</script>
 
-  <link href='https://fonts.googleapis.com/css?family=Montserrat:100' rel='stylesheet'>
-  <link href='https://fonts.googleapis.com/css?family=Montserrat:500' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+
+  <script src="https://www.google.com/recaptcha/api.js"></script>
 </head>
 
 <body>
@@ -44,12 +45,12 @@
   </div>
 
   <div class="header">
-<div class="photo_div">
-                    <img src="../global_images/DRRE_logo_wide.png" class="header_image_mobile"
-                        alt="The Dirt Road Real Estate logo; a yellow jeep in a mountainous backdrop.">
-                    <img src="../global_images/DRRE_logo_full_clear.png" class="header_image_full"
-                        alt="The Dirt Road Real Estate logo; a yellow jeep in a mountainous backdrop.">
-                </div>
+    <div class="photo_div">
+      <img src="../global_images/DRRE_logo_wide.png" class="header_image_mobile"
+        alt="The Dirt Road Real Estate logo; a yellow jeep in a mountainous backdrop.">
+      <img src="../global_images/DRRE_logo_full_clear.png" class="header_image_full"
+        alt="The Dirt Road Real Estate logo; a yellow jeep in a mountainous backdrop.">
+    </div>
     <div class="title_grid">
       <p class="header_text company_text">Dirt Road Real Estate</p>
       <p class="header_text page_text">Contact Us</p>
@@ -89,12 +90,14 @@
       <br>
       <h1 id="road_header" class="section_header center_header show_me">Our Coverage Area <br>Road Map</h1>
       <h1 id="topo_header" class="section_header center_header hide_me">Our Coverage Area <br>Topographic Map</h1>
-      <h1 id="regions_header" class="section_header center_header hide_me">Our Coverage Area <br>Ecological Regions Map</h1>
+      <h1 id="regions_header" class="section_header center_header hide_me">Our Coverage Area <br>Ecological Regions Map
+      </h1>
       <h1 id="precip_header" class="section_header center_header hide_me">Our Coverage Area <br>Precipitation Map</h1>
       <h1 id="aquifers_header" class="section_header center_header hide_me">Our Coverage Area <br>Aquifer Map</h1>
       <h1 id="ecoregions_header" class="section_header center_header hide_me">Our Coverage Area <br>Biome Map</h1>
       <h1 id="geo_header" class="section_header center_header hide_me">Our Coverage Area <br>Geological Map</h1>
-      <h1 id="management_header" class="section_header center_header hide_me">Our Coverage Area <br>Land Management Map</h1>
+      <h1 id="management_header" class="section_header center_header hide_me">Our Coverage Area <br>Land Management Map
+      </h1>
       <div class="main_map">
         <img id="road_large" class="show_me large_map" src="images/maps/road.png"
           alt="a road map of Northwest Arizona with Dirt Road Real Estate's range highlighted.">
@@ -149,7 +152,8 @@
         <a id="precip_source" class="hide_me map_source" target="_blank" rel="noopener noreferrer"
           href="https://wrrc.arizona.edu/resources/arizona-water-map-poster">Open Map Source In New Tab</a>
         <a id="aquifers_source" class="hide_me map_source" target="_blank" rel="noopener noreferrer"
-          href="https://www.usgs.gov/media/images/aquifers-map-principal-aquifers-united-states">Open Map Source In New Tab</a>
+          href="https://www.usgs.gov/media/images/aquifers-map-principal-aquifers-united-states">Open Map Source In New
+          Tab</a>
         <a id="ecoregions_source" class="hide_me map_source" target="_blank" rel="noopener noreferrer"
           href="https://www.epa.gov/eco-research/ecoregion-download-files-state-region-9">Open Map Source In New Tab</a>
         <a id="geo_source" class="hide_me map_source" target="_blank" rel="noopener noreferrer"
@@ -182,16 +186,20 @@
 
     <div class="email_div">
       <h1 class="section_header center_header">Have a question? <br>Send us an email today!</h1>
-      <form id="contact_form" class="email_form">
-        <label class="input_label">Name:</label>
-        <input type="text" name="user_name" class="input_text">
-        <label class="input_label">Email:</label>
-        <input type="email" name="user_email" class="input_text">
-        <label class="input_label">Message:</label>
-        <textarea name="message" class="input_area"></textarea>
-        <input type="hidden" name="contact_number" value="697483">
-        <br>
+      <form id="contact_form" class="content">
+        <div class="email_form">
+          <label class="input_label">Name:</label>
+          <input type="text" name="user_name" id="user_name" class="input_text">
+          <label class="input_label">Email:</label>
+          <input type="email" name="user_email" id="user_email" class="input_text">
+          <label class="input_label">Message:</label>
+          <textarea name="message" class="input_area" id="input_area"></textarea>
+        </div>
+        <br><br>
+        <div class="g-recaptcha pad_email_form" data-sitekey="6LefCh8qAAAAANoJOT4WesJMvt5UfLBnCUr5PlCF"></div>
+        <br><br>
         <input type="submit" value="Send" class="submit_email">
+
       </form>
     </div>
 

@@ -91,6 +91,7 @@ body {
         row-gap: 5vh;
 
         margin-top: 5vh;
+        margin-bottom: 5vh;
         margin-left: 5vw;
         margin-right: 5vw;
 
@@ -168,11 +169,11 @@ body {
         margin-left: auto;
         margin-right: auto;
 
-        width: max-content;
-        max-width: max-content;
+        width: 100%;
+        max-width: 100%;
 
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     }
 
     .display_info {
@@ -194,7 +195,7 @@ body {
 
     .email_div {
         display: grid;
-        grid-template-columns: 1fr 2fr;
+        grid-template-columns: 1fr 1fr;
         row-gap: 5vh;
 
         width: 90vw;
@@ -202,6 +203,11 @@ body {
         margin-top: 5vh;
         margin-left: 3vw;
         margin-right: 3vw;
+        margin-bottom: 3vh;
+    }
+
+    .pad_email_form {
+        padding-left: 5vw;
     }
 
     .review_div {
@@ -268,6 +274,7 @@ body {
     max-height: 15vh;
     padding: .5vw;
     margin-bottom: 2vh;
+    width: 10vw;
 }
 
 .select_img {
@@ -303,6 +310,14 @@ body {
     width: 30vw;
     height: calc(30px + 3vw);
     font-size: 18px;
+}
+
+.g-recaptcha {
+    margin-left: auto;
+    margin-right: auto;
+
+    margin-top: 3vh;
+    margin-bottom: 3vh;
 }
 
 .submit_email {

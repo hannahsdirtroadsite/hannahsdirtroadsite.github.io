@@ -31,10 +31,24 @@ function toggleElements(element) {
     element.classList.toggle("hide_me")
 }
 
-window.onload = function() {
-    document.getElementById('contact_form').addEventListener('submit', function(event) {
+window.onload = function () {
+    document.getElementById('contact_form').addEventListener('submit', function (event) {
+
         event.preventDefault();
-        // these IDs from the previous steps
+
+        let fields = ['user_name', 'user_email']
+    
+        for (let i = 0; i < 3; i++) {
+            let field = document.getElementById(fields[i]);
+
+            if (field.value == '') {
+                field.style.border = "thick solid #bb2024";
+                field.placeholder = "required field"
+                console.log('invalid ' + fields[i] + " element.")
+                return;
+            }
+        }
+
         emailjs.sendForm('service_8r8dc1k', 'template_poy4uku', this)
             .then(() => {
                 console.log('send SUCCESS!');
