@@ -19,7 +19,7 @@ img {
         grid-template-columns: 1fr;
     }
 
-    .photo_div {
+    .pic_div {
         margin-right: 5vw;
         margin-left: 5vw;
     }
@@ -68,7 +68,7 @@ img {
         display: block;
     }
 
-    .photo_div {
+    .pic_div {
         float: left;
         width: 60vw;
         margin: 5vw;
