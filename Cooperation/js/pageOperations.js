@@ -50,7 +50,7 @@ async function getAllListings() {
       $("#mod_payment").val(data[3])
       $("#mod_status").val(data[4])
       $("#mod_last_mod").val(data[5])
-      $("#mod_change_log").html("<summary>Change Log</summary>" + data[6].replace('\n', '<br>'))
+      $("#change_log_text").val(data[6])
     }
   });
 }

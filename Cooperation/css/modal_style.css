@@ -56,6 +56,13 @@
         overflow: auto;
         float: center;
     }
+
+    
+    .overflow {
+        width: max-content;
+        height: max-content;
+        overflow:scroll;
+    }
 }
 
 @media (min-width: 400px) {
@@ -70,6 +77,13 @@
         overflow: auto;
         float: center;
     }
+
+    
+.overflow {
+    width: 250px;
+    height: max-content;
+    overflow:scroll;
+  }
 }
 
 div.modal-content-grid {
