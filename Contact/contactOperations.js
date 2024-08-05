@@ -38,7 +38,7 @@ window.onload = function () {
 
         let fields = ['user_name', 'user_email']
     
-        for (let i = 0; i < 3; i++) {
+        for (let i = 0; i < 2; i++) {
             let field = document.getElementById(fields[i]);
 
             if (field.value == '') {
