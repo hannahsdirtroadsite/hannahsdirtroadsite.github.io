@@ -28,7 +28,7 @@ img {
         grid-template-columns: 1fr;
     }
 
-    .header_text {
+    .section_header {
         font-family: "Montserrat";
         color: var(--DRRE_red);
     
@@ -57,12 +57,12 @@ img {
         grid-template-columns: 1fr 2fr;
     }
 
-    .header_text {
+    .section_header {
         font-family: "Montserrat";
         color: var(--DRRE_red);
     
-        float: right;
-        margin-right: 10vh;
+        margin: auto;
+        margin-left: 10vw;
     }
 
     .property_img {
