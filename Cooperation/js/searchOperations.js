@@ -35,7 +35,6 @@ function buildTable(list) {
       temps[(temps.length - i - 1)].remove();
     }
 
-  console.log(list)
   list.forEach((element) => createRow(element));
 }
 

@@ -1,4 +1,3 @@
-
 :root {
     --DRRE_red: #bb2024;
     --DRRE_yellow: #ffde15;
@@ -76,9 +75,8 @@ hr {
         position: relative;
         overflow: hidden;
         height: 20vh;
-
     }
-    
+
     .header_image_mobile {
         position: absolute;
         top: -9999px;
@@ -86,12 +84,20 @@ hr {
         left: -9999px;
         right: -9999px;
         margin: auto;
-    
+
         height: 20vh;
     }
 
     .header_image_full {
         display: none;
+    }
+
+    .title_grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin-top: 3vh;
+        row-gap: 0;
+        padding-right: 2vw;
     }
 
     .header_text {
@@ -197,35 +203,63 @@ hr {
 
     .header {
         width: 100%;
-        display: grid;
-        grid-template-columns: 1fr 8fr;
     }
-    
+
+    .photo_div {
+        position: relative;
+        overflow: hidden;
+        height: 35vh;
+        width: 100%;
+    }
+
     .header_image_mobile {
         display: none;
     }
 
     .header_image_full {
-        width: 15vw;
         margin-top: 3.5vh;
-        margin-left: 3.5vh;
+
+        height: 25vh;
+        max-height: 600px;
+    }
+
+    .title_grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 0;
+
+        position: absolute;
+        top: 8px;
+        right: 15px;
     }
 
     .header_text {
-        font-family: 'Montserrat';
-        margin: 0;
-        padding-top: 0vh;
+        font-family: 'FORQUE';
         text-align: right;
+
+        margin-bottom: 0;
+
+        max-height: 25vh;
     }
 
     .company_text {
         color: var(--DRRE_red);
-        font-size: 7vw;
+        text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+
+        margin-top: max(1vw, 5vh);
+
+        font-size: min(100px, 10vh, 8vw);
+        font-weight: 900;
     }
 
     .page_text {
-        color: var(--DRRE_mid_gray);
-        font-size: 5vw;
+        color: var(--DRRE_yellow);
+        text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+
+        font-size: min(80px, 8vh, 8vw);
+        font-weight: 900;
+
+        margin-top: 0;
     }
 
     .footer {
@@ -282,14 +316,6 @@ hr {
 
 .other_pg_btn:hover {
     background-color: var(--DRRE_yellow);
-}
-
-.title_grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    margin-top: 3vh;
-    row-gap: 0;
-    padding-right: 2vw;
 }
 
 .footer-text {
