@@ -13,6 +13,24 @@ h2 {
     height: auto;
 }
 
-.bdt-active {
+.entry_div {
+    height: max-content;
     font-family: 'Montserrat';
+    width: 95%;
+    margin-left: 3%;
+}
+
+.entry_div img {
+    max-width: 100%;
+    margin: 2vh;
+}
+
+.entry_div h3 {
+    margin-top: 0;
+    margin-bottom: 0
+}
+
+.blog_post_text {
+    margin-left: 3vw;
+    margin-right: 3vw;
 }

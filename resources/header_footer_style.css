@@ -77,7 +77,7 @@ hr {
     }
 
     .company_text {
-        font-size: max(3.5vw, 3.5vh);
+        font-size: 7vw;
         font-weight: 900;
     
         max-width: 55vw;
@@ -269,7 +269,7 @@ hr {
 }
 
 .header_text {
-    font-family: 'FORQUE';
+    font-family: 'Abraham';
     text-align: right;
 
     margin-bottom: 0;
