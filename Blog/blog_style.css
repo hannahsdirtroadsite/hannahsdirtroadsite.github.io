@@ -3,6 +3,10 @@ h2 {
     color: var(--DRRE_red);
 }
 
+a {
+    margin: 0;
+}
+
 .side_by_side {
     display: flex;
     width: 100%;
@@ -84,7 +88,9 @@ h2 {
 }
 
 .entry_div img {
-    max-width: 100%;
+    width: auto;
+    height: auto;
+    max-width: 60%;
     margin: 2vh;
 }
 
