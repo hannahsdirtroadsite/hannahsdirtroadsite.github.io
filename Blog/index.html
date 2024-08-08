@@ -12,13 +12,13 @@
   <link href="blog_style.css" rel="stylesheet" type="text/css" />
   <link href="../resources/header_footer_style.css" rel="stylesheet" type="text/css" />
 
-    <link href="../resources/fonts/fonts_style.css" rel="stylesheet" type="text/css" />
+  <link href="../resources/fonts/fonts_style.css" rel="stylesheet" type="text/css" />
 
   <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
 
   <script src="blogOperations.js"></script>
 
-  </head>
+</head>
 
 <body onload="loadPosts()">
   <div class="header_menu">
@@ -50,18 +50,32 @@
     }
   </script>
 
-<div class="header">
-  <div class="photo_div">
+  <div class="header">
+    <div class="photo_div">
       <img src="../resources/DRRE_header.png" class="header_image_full"
-          alt="The Dirt Road Real Estate logo; a yellow jeep in a mountainous backdrop.">
+        alt="The Dirt Road Real Estate logo; a yellow jeep in a mountainous backdrop.">
       <div class="title_grid">
-          <p class="header_text company_text">DIRT ROAD REAL ESTATE</p>
-          <p class="header_text page_text">Blog</p>
+        <p class="header_text company_text">DIRT ROAD REAL ESTATE</p>
+        <p class="header_text page_text">Blog</p>
       </div>
+    </div>
   </div>
-</div>
 
   <hr>
+  <div class="side_by_side">
+    <div class="active_tags_div" id="active_tags_div">
+      <h2 class="active_tags_label">Currently Filtering By:</h2>
+  
+    </div>
+  
+    <div class="search_div">
+      <div class="search_bar_div">
+        <input id="search_input" type="text" class="search_bar" placeholder=" Search"
+          onkeypress="handle(event)" onsubmit="loadPosts()" required><button onclick="loadPosts()"
+          class="submit_search">Search</button>
+      </div>
+    </div>
+  </div>
 
   <div class="content" id="content">
 
