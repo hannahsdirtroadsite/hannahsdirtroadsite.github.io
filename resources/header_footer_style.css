@@ -65,7 +65,7 @@ hr {
     .header {
         width: 100%;
         margin-top: 1vh;
-        
+
         display: grid;
         grid-template-columns: 1fr;
         justify-content: center;
@@ -79,12 +79,12 @@ hr {
     .company_text {
         font-size: 7vw;
         font-weight: 900;
-    
+
         max-width: 55vw;
 
         margin-top: max(4vw, 4vh);
     }
-    
+
     .page_text {
         font-size: max(3vw, 3vh);
         font-weight: 900;
@@ -122,7 +122,8 @@ hr {
     .contact_info {
         font-size: 15px;
         text-decoration: none;
-        width: max-content;
+        max-width: 98vw;
+
         background-color: white;
         margin-top: 0;
         margin-bottom: 0;
@@ -133,6 +134,7 @@ hr {
     .contact_icon {
         margin: auto;
         float: right;
+        height: 15px;
     }
 }
 
@@ -189,7 +191,7 @@ hr {
 
         margin-top: 3vw;
     }
-    
+
     .page_text {
         font-size: max(5vw, 5vh);
         font-weight: 900;
@@ -225,8 +227,12 @@ hr {
     }
 
     .contact_info {
-        font-size: 25px;
+        font-size: calc(15px + 1vw);
         text-decoration: none;
+    }
+
+    .contact_icon {
+        height: 25px;
     }
 }
 
@@ -298,7 +304,6 @@ hr {
 }
 
 .contact_icon {
-    height: 25px;
     display: block;
     margin: auto;
     margin-right: 5px;
