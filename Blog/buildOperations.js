@@ -1,31 +1,59 @@
-const blogURL = "https://kde1rmcvd5.execute-api.us-east-1.amazonaws.com/Stage1/blog";
-
+//loads the posts from json to html
 async function loadPosts() {
     scroll(0, 0)
     displaySelectedTags();
 
     content = document.getElementById("content")
+
     loading = document.createElement("h2")
     loading.innerHTML = 'Loading Blog'
     content.appendChild(loading)
 
+    postsPer = document.getElementById('postPerPage').value;
+
     response = await sendRequest()
     content.innerHTML = '';
 
+    pages = document.getElementById("pagination")
+    pages.style.display = 'none';
+    pageSel = document.getElementById("pageSelect")
+    pageSel.innerHTML = '<option value="1" id="opt1">1</option>'
+
+    console.log(response.length)
     for (let i = 0; i < response.length; i++) {
-        let newDiv = newBlogPost(response[i])
+        pageNum = Math.floor(i / postsPer) + 1
+        let currDiv = document.getElementById('content' + pageNum)
+        if (currDiv == undefined) {
+            currDiv = document.createElement('div')
+            currDiv.id = 'content' + pageNum
+            currDiv.classList.add('page_content')
 
-        content.appendChild(newDiv)
+            if (pageNum > 1) {
+                currDiv.style.display = 'none'
+                pages.style.display = 'block';
 
-        if (i < response.length - 1) {
+                newOpt = document.createElement('option')
+                newOpt.value = pageNum;
+                newOpt.innerText = pageNum;
+                newOpt.id = 'opt' + pageNum
+                pageSel.appendChild(newOpt)
+            }
+            content.appendChild(currDiv)
+        }
+        let entryDiv = newBlogPost(response[i])
+
+        currDiv.appendChild(entryDiv)
+
+        if (i % postsPer < 4) {
             newImg = document.createElement("img");
             newImg.classList.add("line_break_photo")
             newImg.src = "../resources/DRRE_line_break_" + i % 4 + ".jpg"
-            content.appendChild(newImg)
+            currDiv.appendChild(newImg)
         }
     }
 }
 
+//the function that builds the div of currently selected tags, or hides it in case there are no selected tags
 function displaySelectedTags() {
     let tags = localStorage.getItem("tags");
     let tagDiv = document.getElementById('active_tags_div');
@@ -87,44 +115,4 @@ function newBlogPost(entry) {
     newDiv.appendChild(tagDiv)
 
     return newDiv;
-}
-
-async function filterTag(tag) {
-    tags = localStorage.getItem("tags")
-    localStorage.setItem("tags", tags + tag.innerText + ",")
-
-    loadPosts()
-}
-
-function unfilterTag(tag) {
-    tags = localStorage.getItem("tags");
-    tags = tags.replace(tag.id + ',', '');
-
-    localStorage.setItem("tags", tags);
-    loadPosts()
-}
-
-//gives the same effect to hitting enter as hitting the button
-function handle(e) {
-    if (e.keyCode === 13) {
-        loadPosts();
-    }
-    return false;
-}
-
-var requestOptions = {
-    method: 'GET',
-    headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*',
-    },
-};
-
-//send a specified request and return json response
-async function sendRequest() {
-    tags = localStorage.getItem("tags")
-    search = document.getElementById('search_input').value
-    const response = await fetch(blogURL + "?labels=" + tags + "&search=" + search, requestOptions)
-    const json = await response.json()
-    return json;
 }

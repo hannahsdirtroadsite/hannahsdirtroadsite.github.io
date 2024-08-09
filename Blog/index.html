@@ -16,7 +16,8 @@
 
   <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
 
-  <script src="blogOperations.js"></script>
+  <script src="btnOperations.js"></script>
+  <script src="buildOperations.js"></script>
 
 </head>
 
@@ -65,20 +66,35 @@
   <div class="side_by_side">
     <div class="active_tags_div" id="active_tags_div">
       <h2 class="active_tags_label">Currently Filtering By:</h2>
-  
     </div>
-  
+
     <div class="search_div">
       <div class="search_bar_div">
-        <input id="search_input" type="text" class="search_bar" placeholder=" Search"
-          onkeypress="handle(event)" onsubmit="loadPosts()" required><button onclick="loadPosts()"
-          class="submit_search">Search</button>
+        <div>
+          <input id="search_input" type="text" class="search_bar" placeholder=" Search" onkeypress="handle(event)"
+          onsubmit="loadPosts()" required><button onclick="loadPosts()" class="submit_search">Search</button>
+        </div>
+        <select id="postPerPage" onchange="loadPosts()" class="pages_select">
+          <option value="10" id="opt1">10 Posts Per Page</option>
+          <option value="25" id="opt1">25 Posts Per Page</option>
+          <option value="50" id="opt1">50 Posts Per Page</option>
+        </select>
       </div>
     </div>
   </div>
 
   <div class="content" id="content">
 
+  </div>
+
+  <div class="pagination" id="pagination">
+    <div class="center_pagination">
+      <a onclick="prevPage()" id="prev" class="invalid_arrow">⮘</a>
+      <select id="pageSelect" onchange="changePage()">
+        <option value="1" id="opt1">1</option>
+      </select>
+      <a onclick="nextPage()" id="next" class="valid_arrow">⮚</a>
+    </div>
   </div>
 
   <hr>
