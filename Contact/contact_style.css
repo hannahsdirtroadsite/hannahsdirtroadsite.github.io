@@ -328,6 +328,7 @@ body {
     background-color: var(--DRRE_yellow);
 
     width: 20vw;
+    min-width: 70px;
     margin: auto;
 
     border-radius: 10px;

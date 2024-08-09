@@ -256,6 +256,7 @@ hr {
 
     height: max(15vw, 15vh);
     max-height: 600px;
+    min-height: 100px;
 }
 
 .title_grid {

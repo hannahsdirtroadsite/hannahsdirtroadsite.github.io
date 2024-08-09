@@ -15,32 +15,82 @@ a {
     }
 
     .search_bar_div {
-        width: max-content;
-        margin-left: 25vw;
+        margin-right: 10vw;
+        margin-left: 10vw;
+        width: 70vw;
+    }
+
+    .search_bar {
+        width: calc(70vw - 78px);
+    }
+
+    .active_tags_div {
+        display: none;
+        width: 98vw;
+        margin-bottom: 10px;
+
+        justify-content: center;
+        align-items: center;
+    }
+
+    .active_tags_label {
+        margin-left: 10vw;
+        width: 80vw;
+    }
+
+    .pages_select {
+        width: 100%;
     }
 }
 
 @media (min-width: 600px) {
     .side_by_side {
         display: flex;
+        justify-content: space-between;
         width: 100%;
     }
 
     .search_bar_div {
-        width: max-content;
+        max-width: 45vw;
         float: right;
         margin-right: 0;
-        margin-top: 40px;
+        margin-top: 20px;
     }
 
     .search_div {
-        width: 45%;
+        max-width: 50%;
         float: right;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .search_bar {
+        width: 30vw;
+    }
+
+    .active_div {
+        max-width: 50%;
+    }
+
+    .active_tags_div {
+        visibility: hidden;
+        width: 50%;
+
+        justify-content: center;
+        align-items: center;
+    }
+
+    .pages_select {
+        width: calc(30vw + 70px);
+        margin-top: 10px;
     }
 }
 
+.active_tags_label {
+    display: none;
+}
+
 .search_bar {
-    width: 30vw;
     height: 30px;
     border: solid;
     border-width: 1px;
@@ -59,7 +109,6 @@ a {
 }
 
 .pages_select {
-    width: 100%;
     height: 30px;
     background-color: white;
     font-family: 'Montserrat';
@@ -67,20 +116,6 @@ a {
     border: solid;
     border-width: 1px;
     border-radius: 15px;
-}
-
-.tag_button {
-    font-size: 18px;
-    color: var(--DRRE_yellow);
-    background-color: var(--DRRE_red);
-    border: none;
-    box-shadow: none;
-    border-radius: 15px;
-}
-
-.active_tags_div {
-    visibility: hidden;
-    width: 50%;
 }
 
 .active_tag_button {
@@ -91,7 +126,9 @@ a {
     border: none;
     box-shadow: none;
     border-radius: 15px;
-    width: calc(180px)
+
+    height: 25px;
+    width: 180px
 }
 
 .content_header {
@@ -105,7 +142,7 @@ a {
 }
 
 .entry_div {
-    height: max-content;
+    min-height: max-content;
     font-family: 'Montserrat';
     width: 95%;
     margin-left: 3%;
@@ -128,6 +165,30 @@ a {
     margin-right: 3vw;
 }
 
+
+.tags_div {
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: center;
+    align-items: center;
+
+    min-width: 100%;
+}
+
+.tag_button {
+    font-size: 18px;
+    color: var(--DRRE_yellow);
+    background-color: var(--DRRE_red);
+    
+    min-width: max-content;
+    height: 25px;
+
+    border: none;
+    box-shadow: none;
+    border-radius: 15px;
+}
+
 .pagination {
     margin: auto;
     display: none;
@@ -145,4 +206,8 @@ a {
 
 .valid_arrow {
     color: var(--DRRE_red)
+}
+
+.bdt-active {
+    height: max-content;
 }

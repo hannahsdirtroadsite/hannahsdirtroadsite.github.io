@@ -64,16 +64,16 @@
 
   <hr>
   <div class="side_by_side">
-    <div class="active_tags_div" id="active_tags_div">
-      <h2 class="active_tags_label">Currently Filtering By:</h2>
+    <div class="active_div">
+      <h2 class="active_tags_label" id="active_tags_label">Currently Filtering By:</h2>
+      <div class="active_tags_div" id="active_tags_div">
+      </div>
     </div>
 
     <div class="search_div">
       <div class="search_bar_div">
-        <div>
           <input id="search_input" type="text" class="search_bar" placeholder=" Search" onkeypress="handle(event)"
           onsubmit="loadPosts()" required><button onclick="loadPosts()" class="submit_search">Search</button>
-        </div>
         <select id="postPerPage" onchange="loadPosts()" class="pages_select">
           <option value="10" id="opt1">10 Posts Per Page</option>
           <option value="25" id="opt1">25 Posts Per Page</option>

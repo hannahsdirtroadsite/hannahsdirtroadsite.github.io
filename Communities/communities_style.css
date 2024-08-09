@@ -1,8 +1,8 @@
 html {
     height: 100%;
     width: 100%;
-  }
-  
+}
+
 img {
     border-radius: 3px;
 }
@@ -26,7 +26,6 @@ img {
 
     .intro_desc {
         font-family: 'Montserrat';
-        text-align: justify;
         margin-right: 5vw;
         margin-left: 5vw;
         font-size: 15px;
@@ -76,7 +75,6 @@ img {
 
     .intro_desc {
         font-family: 'Montserrat';
-        text-align: justify;
         margin-top: 10vh;
         margin-right: 5vw;
         margin-left: 5vw;
@@ -91,7 +89,7 @@ img {
         display: grid;
         row-gap: 0;
         padding-left: 0;
-        
+
     }
 
     .space {

@@ -19,7 +19,6 @@ async function loadPosts() {
     pageSel = document.getElementById("pageSelect")
     pageSel.innerHTML = '<option value="1" id="opt1">1</option>'
 
-    console.log(response.length)
     for (let i = 0; i < response.length; i++) {
         pageNum = Math.floor(i / postsPer) + 1
         let currDiv = document.getElementById('content' + pageNum)
@@ -40,11 +39,12 @@ async function loadPosts() {
             }
             content.appendChild(currDiv)
         }
-        let entryDiv = newBlogPost(response[i])
 
-        currDiv.appendChild(entryDiv)
+        currDiv.appendChild(newBlogPost(response[i]))
 
-        if (i % postsPer < 4) {
+        currDiv.appendChild(newTagsBar(response[i]))
+
+        if (i % postsPer < postsPer - 1) {
             newImg = document.createElement("img");
             newImg.classList.add("line_break_photo")
             newImg.src = "../resources/DRRE_line_break_" + i % 4 + ".jpg"
@@ -57,13 +57,18 @@ async function loadPosts() {
 function displaySelectedTags() {
     let tags = localStorage.getItem("tags");
     let tagDiv = document.getElementById('active_tags_div');
-    tagDiv.innerHTML = '<h2 class="active_tags_label">Currently Filtering By:</h2>'
+    let tagLabel = document.getElementById('active_tags_label');
+    tagDiv.innerHTML = ''
     if (tags == null || tags == undefined || tags == '' || tags == ',') {
         tagDiv.style.visibility = "hidden"
+        tagDiv.style.display = "none"
+        tagLabel.style.display = "none"
         localStorage.setItem("tags", '');
         return;
     }
     tagDiv.style.visibility = "visible"
+    tagDiv.style.display = "flex"
+    tagLabel.style.display = "block"
     tagsList = tags.split(',')
 
     for (let i = 0; i < tagsList.length - 1; i++) {
@@ -101,6 +106,10 @@ function newBlogPost(entry) {
     body.innerHTML = entry['content'].replaceAll('<span class="blog_post_text">', '').replaceAll('</span>', '').replaceAll('&nbsp;', '')
     newDiv.appendChild(body)
 
+    return newDiv;
+}
+
+function newTagsBar(entry) {
     tagDiv = document.createElement("div");
     tagDiv.classList.add("tags_div")
     for (let j = 0; j < entry['labels'].length; j++) {
@@ -112,7 +121,5 @@ function newBlogPost(entry) {
         });
         tagDiv.appendChild(tag)
     }
-    newDiv.appendChild(tagDiv)
-
-    return newDiv;
+    return tagDiv
 }
