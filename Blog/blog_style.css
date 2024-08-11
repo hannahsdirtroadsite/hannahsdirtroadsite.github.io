@@ -29,7 +29,7 @@ select {
     }
 
     .search_bar {
-        width: calc(70vw - 78px);
+        width: calc(70vw - 90px);
         font-size: calc(18px + .5vw);
         font-family: "Montserrat";
         height: 40px;
@@ -50,7 +50,7 @@ select {
     }
 
     .entry_div img {
-        width: 90vw;
+        width: 80vw;
         margin: auto;
     }
 
@@ -135,6 +135,7 @@ select {
     margin-left: 0px;
     height: 45px;
     width: 10vw;
+    min-width: 80px;
 }
 
 .pages_select {
