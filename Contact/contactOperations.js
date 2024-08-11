@@ -52,8 +52,11 @@ window.onload = function () {
         emailjs.sendForm('service_8r8dc1k', 'template_poy4uku', this)
             .then(() => {
                 console.log('send SUCCESS!');
+                alert("Email Sent!")
+                window.location.reload();
             }, (error) => {
                 console.log('send FAILED...', error);
+                alert("Send failed, please try again later. ")
             });
     });
 }

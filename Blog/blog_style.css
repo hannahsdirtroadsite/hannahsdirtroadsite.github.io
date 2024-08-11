@@ -49,6 +49,11 @@ select {
         width: 80vw;
     }
 
+    .entry_div img {
+        width: 90vw;
+        margin: auto;
+    }
+
     .pages_select {
         width: 100%;
     }
@@ -92,6 +97,13 @@ select {
 
         justify-content: center;
         align-items: center;
+    }
+
+    .entry_div img {
+        width: 40vw;
+        max-width: 100%;
+        height: auto;
+        margin: 2vh;
     }
 
     .pages_select {
@@ -162,14 +174,6 @@ select {
     font-family: 'Montserrat';
     width: 95%;
     margin-left: 3%;
-}
-
-.entry_div img {
-    width: auto;
-    height: auto;
-    max-width: 60%;
-    width: 60%;
-    margin: 2vh;
 }
 
 .entry_div h3 {
