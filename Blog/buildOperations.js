@@ -18,8 +18,9 @@ async function loadPosts() {
     pages.style.display = 'none';
     pageSel = document.getElementById("pageSelect")
     pageSel.innerHTML = '<option value="1" id="opt1">1</option>'
-
+    console.log(postsPer)
     for (let i = 0; i < response.length; i++) {
+        console.log(i)
         pageNum = Math.floor(i / postsPer) + 1
         let currDiv = document.getElementById('content' + pageNum)
         if (currDiv == undefined) {
