@@ -73,7 +73,7 @@
     <div class="search_div">
       <div class="search_bar_div">
           <input id="search_input" type="text" class="search_bar" placeholder=" Search" onkeypress="handle(event)"
-          onsubmit="loadPosts()" required><button onclick="loadPosts()" class="submit_search">Search</button>
+          onsubmit="loadPosts()" required><button onclick="loadPosts()" class="submit_search"> Search </button></input>
         <select id="postPerPage" onchange="loadPosts()" class="pages_select">
           <option value="10" id="opt1">10 Posts Per Page</option>
           <option value="25" id="opt1">25 Posts Per Page</option>
@@ -90,7 +90,7 @@
   <div class="pagination" id="pagination">
     <div class="center_pagination">
       <a onclick="prevPage()" id="prev" class="invalid_arrow">⮘</a>
-      <select id="pageSelect" onchange="changePage()">
+      <select id="pageSelect" onchange="changePage()" class="pagination_drop">
         <option value="1" id="opt1">1</option>
       </select>
       <a onclick="nextPage()" id="next" class="valid_arrow">⮚</a>

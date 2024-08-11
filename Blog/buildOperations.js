@@ -45,7 +45,8 @@ async function loadPosts() {
 
         currDiv.appendChild(newTagsBar(response[i]))
 
-        if (i % postsPer < postsPer - 1) {
+        //if there's going to be another entry, add a quick little jeep logo for a line break
+        if (i % postsPer < postsPer - 1 && i < response.length - 1) {
             newImg = document.createElement("img");
             newImg.classList.add("line_break_photo")
             newImg.src = "../resources/DRRE_line_break_" + i % 4 + ".jpg"
@@ -104,12 +105,14 @@ function newBlogPost(entry) {
     newDiv.appendChild(auth)
 
     body = document.createElement("div");
+    body.classList.add("entry_body")
     body.innerHTML = entry['content'].replaceAll('<span class="blog_post_text">', '').replaceAll('</span>', '').replaceAll('&nbsp;', '')
     newDiv.appendChild(body)
 
     return newDiv;
 }
 
+//tag bars are separate from blog posts for formatting reasons; these are the tags for each post.
 function newTagsBar(entry) {
     tagDiv = document.createElement("div");
     tagDiv.classList.add("tags_div")

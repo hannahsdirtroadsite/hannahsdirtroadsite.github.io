@@ -1,10 +1,17 @@
 h2 {
     font-family: 'Montserrat';
     color: var(--DRRE_red);
+    font-size: calc(18px + .5vw);
 }
 
 a {
     margin: 0;
+}
+
+select {
+    font-size: calc(18px + .5vw);
+    font-family: "Montserrat";
+    height: 40px;
 }
 
 @media (max-width: 600px) {
@@ -18,10 +25,14 @@ a {
         margin-right: 10vw;
         margin-left: 10vw;
         width: 70vw;
+        display: inline-block;
     }
 
     .search_bar {
         width: calc(70vw - 78px);
+        font-size: calc(18px + .5vw);
+        font-family: "Montserrat";
+        height: 40px;
     }
 
     .active_tags_div {
@@ -51,10 +62,9 @@ a {
     }
 
     .search_bar_div {
-        max-width: 45vw;
-        float: right;
-        margin-right: 0;
+        max-width: max-content;
         margin-top: 20px;
+        display: inline-block;
     }
 
     .search_div {
@@ -65,7 +75,11 @@ a {
     }
 
     .search_bar {
+        height: 40px;
         width: 30vw;
+
+        font-size: calc(18px + .5vw);
+        font-family: "Montserrat";
     }
 
     .active_div {
@@ -81,7 +95,7 @@ a {
     }
 
     .pages_select {
-        width: calc(30vw + 70px);
+        width: 40vw;
         margin-top: 10px;
     }
 }
@@ -91,7 +105,6 @@ a {
 }
 
 .search_bar {
-    height: 30px;
     border: solid;
     border-width: 1px;
     border-top-left-radius: 15px;
@@ -99,17 +112,20 @@ a {
 }
 
 .submit_search {
-    width: 70px;
-    height: 33.5px;
+    font-size: calc(18px + .5vw);
+    font-family: "Montserrat";
+
     border: solid;
     border-width: 1px;
-    margin-left: 0px;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
+
+    margin-left: 0px;
+    height: 45px;
+    width: 10vw;
 }
 
 .pages_select {
-    height: 30px;
     background-color: white;
     font-family: 'Montserrat';
 
@@ -120,15 +136,15 @@ a {
 
 .active_tag_button {
     position: relative;
-    font-size: 18px;
+    font-size: calc(18px + .5vw);
     color: var(--DRRE_red);
     background-color: var(--DRRE_yellow);
     border: none;
     box-shadow: none;
     border-radius: 15px;
 
-    height: 25px;
-    width: 180px
+    min-height: max-content;   
+    width: 35vw;
 }
 
 .content_header {
@@ -137,7 +153,7 @@ a {
     margin-top: 15px;
     margin-bottom: 15px;
     font-weight: 500;
-    font-size: 18px;
+    font-size: calc(18px + .5vw);
     height: auto;
 }
 
@@ -152,17 +168,23 @@ a {
     width: auto;
     height: auto;
     max-width: 60%;
+    width: 60%;
     margin: 2vh;
 }
 
 .entry_div h3 {
     margin-top: 0;
-    margin-bottom: 0
+    margin-bottom: 0;
+    font-size: calc(15px + .5vw);
 }
 
-.blog_post_text {
+
+
+.entry_body {
     margin-left: 3vw;
     margin-right: 3vw;
+    font-size: calc(16px + .5vw);
+    font-family: "Montserrat"
 }
 
 
@@ -177,12 +199,12 @@ a {
 }
 
 .tag_button {
-    font-size: 18px;
+    font-size: calc(18px + .5vw);
     color: var(--DRRE_yellow);
     background-color: var(--DRRE_red);
     
     min-width: max-content;
-    height: 25px;
+    min-height: max-content;    
 
     border: none;
     box-shadow: none;
@@ -197,15 +219,25 @@ a {
 
 .center_pagination {
     width: max-content;
-    margin: auto;
+
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pagination_drop {
+    width: max-content;
+    background-color: white;
 }
 
 .invalid_arrow {
-    color: var(--DRRE_dark_gray)
+    color: var(--DRRE_dark_gray);
+    font-size: calc(20px + .5vw)
 }
 
 .valid_arrow {
-    color: var(--DRRE_red)
+    color: var(--DRRE_red);
+    font-size: calc(20px + .5vw)
 }
 
 .bdt-active {
