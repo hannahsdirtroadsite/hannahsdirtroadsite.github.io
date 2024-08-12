@@ -73,7 +73,8 @@
 
     .entry {
         max-width: 100%;
-    
+        min-height: max-content;
+
         display: block;
     }
 }
