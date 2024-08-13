@@ -1,0 +1,148 @@
+html {
+    height: 100%;
+    width: 100%;
+}
+
+img {
+    border-radius: 3px;
+}
+
+.content {
+    margin-top: 1vh;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+@media (max-width: 700px) {
+    .entry {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .pic_div {
+        margin-right: 5vw;
+        margin-left: 5vw;
+    }
+
+    .intro_desc {
+        font-family: 'Montserrat';
+        margin-right: 5vw;
+        margin-left: 5vw;
+        font-size: 15px;
+    }
+
+    .info_bio {
+        margin: auto;
+        width: 80vw;
+    }
+
+    .headers {
+        display: grid;
+        grid-template-columns: 2fr 3fr;
+        margin: auto;
+        row-gap: 1vh;
+    }
+
+    .deets {
+        font-family: 'Montserrat';
+        font-weight: 500;
+        color: var(--DRRE_red);
+        font-size: calc(12px + .5vw);
+        width: max-content;
+        margin: auto;
+    }
+
+    .section_header {
+        font-family: 'Montserrat';
+        font-weight: 900;
+        color: var(--DRRE_red);
+        font-size: calc(15px + .5vw);
+        width: max-content;
+        margin: auto;
+    }
+}
+
+@media (min-width: 700px) {
+    .entry {
+        display: block;
+    }
+
+    .pic_div {
+        float: left;
+        width: 60vw;
+        margin: 5vw;
+    }
+
+    .intro_desc {
+        font-family: 'Montserrat';
+        margin-top: 10vh;
+        margin-right: 5vw;
+        margin-left: 5vw;
+        font-size: 18px;
+    }
+
+    .info_bio {
+        margin-top: calc(15vw - 10vh);
+    }
+
+    .headers {
+        display: grid;
+        row-gap: 0;
+        padding-left: 0;
+
+    }
+
+    .space {
+        margin-top: 1vh;
+        margin-bottom: 0;
+    }
+
+    .deets {
+        font-family: 'Montserrat';
+        font-weight: 500;
+        color: var(--DRRE_red);
+        font-size: calc(12px + .5vw)
+    }
+
+    .section_header {
+        font-family: 'Montserrat';
+        font-weight: 900;
+        color: var(--DRRE_red);
+        font-size: calc(15px + .5vw);
+    }
+
+    .pad_left {
+        margin-left: 3vw;
+    }
+
+    .pad_right {
+        margin-right: 5vw;
+    }
+
+    .no_space {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .more_info {
+        margin-top: 3vh;
+    }
+}
+
+.stats {
+    font-family: 'Montserrat';
+    font-weight: 500;
+    color: var(--DRRE_red);
+    font-size: calc(12px + .5vw)
+}
+
+.community_desc {
+    font-family: 'Montserrat';
+    margin-right: 5vw;
+    margin-left: 5vw;
+    font-size: 18px;
+}
+
+.community_example {
+    width: 100%;
+}

@@ -1,0 +1,250 @@
+h2 {
+    font-family: 'Montserrat';
+    color: var(--DRRE_red);
+    font-size: calc(18px + .5vw);
+}
+
+a {
+    margin: 0;
+}
+
+select {
+    font-size: calc(18px + .5vw);
+    font-family: "Montserrat";
+    height: 40px;
+}
+
+@media (max-width: 600px) {
+    .side_by_side {
+        display: grid;
+        grid-template-columns: 1px;
+        width: 100%;
+    }
+
+    .search_bar_div {
+        margin-right: 10vw;
+        margin-left: 10vw;
+        width: 70vw;
+        display: inline-block;
+    }
+
+    .search_bar {
+        width: calc(70vw - 90px);
+        font-size: calc(18px + .5vw);
+        font-family: "Montserrat";
+        height: 40px;
+    }
+
+    .active_tags_div {
+        display: none;
+        width: 98vw;
+        margin-bottom: 10px;
+
+        justify-content: center;
+        align-items: center;
+    }
+
+    .active_tags_label {
+        margin-left: 10vw;
+        width: 80vw;
+    }
+
+    .entry_div img {
+        width: 80vw;
+        margin: auto;
+    }
+
+    .pages_select {
+        width: 100%;
+    }
+}
+
+@media (min-width: 600px) {
+    .side_by_side {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .search_bar_div {
+        max-width: max-content;
+        margin-top: 20px;
+        display: inline-block;
+    }
+
+    .search_div {
+        max-width: 50%;
+        float: right;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .search_bar {
+        height: 40px;
+        width: 30vw;
+
+        font-size: calc(18px + .5vw);
+        font-family: "Montserrat";
+    }
+
+    .active_div {
+        max-width: 50%;
+    }
+
+    .active_tags_div {
+        visibility: hidden;
+        width: 50%;
+
+        justify-content: center;
+        align-items: center;
+    }
+
+    .entry_div img {
+        width: 40vw;
+        max-width: 100%;
+        height: auto;
+        margin: 2vh;
+    }
+
+    .pages_select {
+        width: 40vw;
+        margin-top: 10px;
+    }
+}
+
+.active_tags_label {
+    display: none;
+}
+
+.search_bar {
+    border: solid;
+    border-width: 1px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.submit_search {
+    font-size: calc(18px + .5vw);
+    font-family: "Montserrat";
+
+    border: solid;
+    border-width: 1px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+
+    margin-left: 0px;
+    height: 45px;
+    width: 10vw;
+    min-width: 80px;
+}
+
+.pages_select {
+    background-color: white;
+    font-family: 'Montserrat';
+
+    border: solid;
+    border-width: 1px;
+    border-radius: 15px;
+}
+
+.active_tag_button {
+    position: relative;
+    font-size: calc(18px + .5vw);
+    color: var(--DRRE_red);
+    background-color: var(--DRRE_yellow);
+    border: none;
+    box-shadow: none;
+    border-radius: 15px;
+
+    min-height: max-content;   
+    width: 35vw;
+}
+
+.content_header {
+    font-family: 'Montserrat';
+    color: var(--DRRE_red);
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-weight: 500;
+    font-size: calc(18px + .5vw);
+    height: auto;
+}
+
+.entry_div {
+    min-height: max-content;
+    font-family: 'Montserrat';
+    width: 95%;
+    margin-left: 3%;
+}
+
+.entry_div h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: calc(15px + .5vw);
+}
+
+
+
+.entry_body {
+    margin-left: 3vw;
+    margin-right: 3vw;
+    font-size: calc(16px + .5vw);
+    font-family: "Montserrat"
+}
+
+
+.tags_div {
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: center;
+    align-items: center;
+
+    min-width: 100%;
+}
+
+.tag_button {
+    font-size: calc(18px + .5vw);
+    color: var(--DRRE_yellow);
+    background-color: var(--DRRE_red);
+    
+    min-width: max-content;
+    min-height: max-content;    
+
+    border: none;
+    box-shadow: none;
+    border-radius: 15px;
+}
+
+.pagination {
+    margin: auto;
+    display: none;
+    color: var(--DRRE_red)
+}
+
+.center_pagination {
+    width: max-content;
+
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pagination_drop {
+    width: max-content;
+    background-color: white;
+}
+
+.invalid_arrow {
+    color: var(--DRRE_dark_gray);
+    font-size: calc(20px + .5vw)
+}
+
+.valid_arrow {
+    color: var(--DRRE_red);
+    font-size: calc(20px + .5vw)
+}
+
+.bdt-active {
+    height: max-content;
+}

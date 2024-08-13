@@ -1,0 +1,128 @@
+.modal label {
+    margin-top: 6px;
+    font-size: 15px;
+}
+
+.modal p {
+    margin-top: 6px;
+    font-size: 15px;
+}
+
+.modal input[type=text] {
+    height: 15px;
+}
+
+.read_only {
+    pointer-events: none;
+    opacity: 0.7;
+}
+
+.item {
+    margin: auto;
+    margin-top: 3%;
+    width: 95%;
+    border-radius: 10px;
+}
+
+.modal {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    top: 20%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+}
+
+.error {
+    color: red;
+    float: center;
+    margin: auto;
+    margin-left: 15%;
+    font-family: arial;
+    font-size: 15px;
+}
+
+@media (max-width: 400px) {
+    /* Modal Content */
+    .modal-content {
+        overflow-y: scroll;
+        background-color: #fafafa;
+        margin: auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+        overflow: auto;
+        float: center;
+    }
+
+    
+    .overflow {
+        width: max-content;
+        height: max-content;
+        overflow:scroll;
+    }
+}
+
+@media (min-width: 400px) {
+    /* Modal Content */
+    .modal-content {
+        overflow-y: scroll;
+        background-color: #fafafa;
+        margin: auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 300px;
+        overflow: auto;
+        float: center;
+    }
+
+    
+.overflow {
+    width: 250px;
+    height: max-content;
+    overflow:scroll;
+  }
+}
+
+div.modal-content-grid {
+    display: grid;
+    grid-template-columns: max-content max-content;
+    grid-gap: 5px;
+    float: center;
+    margin: auto;
+}
+
+.center_btn {
+    margin-left: 30%;
+    float: center;
+}
+
+.btn_grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: auto;
+    float: center;
+}
+
+.center_grid {
+    float: center;
+    margin-left: 10%;
+}
+
+/* The Close Button */
+.close {
+    color: var(--DRRE_red);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}

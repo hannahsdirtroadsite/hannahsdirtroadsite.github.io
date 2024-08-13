@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>About</title>
+  <link rel="icon" href="../resources/DRRE_logo_icon.png">
+  <link rel="apple-touch-icon" href="../resources/DRRE_logo_icon.png">
+  <meta name="msapplication-TileImage" content="../resources/DRRE_logo_icon.png">
+  <meta name="keywords" content="Dirt Road Real Estate, Real Estate, Offgrid, Offroad, Kingman, Seligman, Hackberry, Ash Fork, Mohave, Cononino, Northwest Arizona, Northern Arizona, Arizona, Interstate 40, Bullhead, Lake Mead, Hualapai, Route 66, Wickieup, Wickiup, Peach Springs, White Hills, Golden Valley, Dirt Road Realtor, Rural Property Realtor, Land Realtor, Residential Property, Home for sale, Vacant Land, Horse Property, Large Acreage, Residential Property, Sustainable Property, Sustainable Homesite, near me, Land for Sale, For sale">
+
+  <link href="about_style.css" rel="stylesheet" type="text/css" />
+  <link href="../resources/header_footer_style.css" rel="stylesheet" type="text/css" />
+
+  <link href="../resources/fonts/fonts_style.css" rel="stylesheet" type="text/css" />
+
+  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+
+
+  <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+</head>
+
+<script>
+  function toggleMenu() {
+    let dropDown = document.getElementById("header_drop_down");
+    if (dropDown.style.display == "none" || dropDown.style.display == '') {
+      dropDown.style.display = "block"
+    }
+    else {
+      dropDown.style.display = "none"
+    }
+  }
+
+  function toggleShowMore() {
+    let details = document.getElementsByTagName("details");
+    let summaries = document.getElementsByTagName("summary");
+
+    if (window.screen.width > 600) {
+      for (let i = 0; i < details.length; i++) {
+        details[i].open = true;
+        summaries[i].style.visibility = 'hidden';
+      }
+    }
+    else {
+      for (let i = 0; i < details.length; i++) {
+        details[i].open = "";
+        summaries[i].style.visibility = 'visible';
+      }
+    }
+  }
+</script>
+
+<body onload="toggleShowMore()" onresize="toggleShowMore()">
+  <div class="header_menu">
+    <button class="menu_btn" onclick="toggleMenu()">
+      <img src="../resources/menu.png" alt="menu" class="menu_img" />
+    </button>
+    <div class="drop_down" id="header_drop_down">
+      <div class="tab_bar" id="tab_bar">
+        <button class="other_pg_btn tab_btn" onclick='window.location.href="../";'>Home</button>
+        <button class="current_pg_btn tab_btn" onclick='window.location.href="../about/";'>About</button>
+        <button class="other_pg_btn tab_btn" onclick='window.location.href="../properties/";'>Properties</button>
+        <button class="other_pg_btn tab_btn" onclick='window.location.href="../communities/";'>Communities</button>
+        <button class="other_pg_btn tab_btn" onclick='window.location.href="../cooperation/";'>Cooperation</button>
+        <button class="other_pg_btn tab_btn" onclick='window.location.href="../blog/";'>Blog</button>
+        <button class="other_pg_btn tab_btn" onclick='window.location.href="../contact/";'>Contact Us</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="header">
+    <div class="photo_div">
+      <img src="../resources/DRRE_header.png" class="header_image_full"
+        alt="The Dirt Road Real Estate logo; a yellow jeep in a mountainous backdrop.">
+      <div class="title_grid">
+        <p class="header_text company_text">DIRT ROAD REAL ESTATE</p>
+        <p class="header_text page_text">About</p>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="content">
+    <div class="entry">
+      <img class="agent_photo_left" src="images/elise_harron.jpeg" />
+      <div class="info_bio">
+        <div class="headers">
+          <h1 class="info_header_left margin_header">Elise Harron</h1>
+          <div class="contact_div">
+            <img src="../resources/skills_icon.png" class="contact_icon" />
+            <a class="info_header_left contact_info">Broker, Offroad Access, Offgrid Living</a>
+          </div>
+          <div class="contact_div">
+            <img src="../resources/email_icon.png" class="contact_icon" />
+            <a class="info_header_left contact_info" href="mailto:elise.harron@gmail.com">elise.harron@gmail.com</a>
+          </div>
+          <div class="contact_div">
+            <img src="../resources/phone_icon.png" class="contact_icon" />
+            <a class="info_header_left contact_info" href="tel:928-897-1364">(928)897-1364</a>
+          </div>
+        </div>
+
+        <details>
+          <summary class="section_header more_info">More Information</summary>
+          <p class="agent_bio">
+            I did not set out to become a rural land specialist… I realized that I <i>am</i> a Rural Land Specialist,
+            and
+            then I
+            <i>became</i> a Realtor and, eventually, a Broker! I already understand the costs and hurdles of changing a
+            rural piece
+            of land into a homestead, a farm or an escape property, and I love it! I think everyone should live like I
+            do,
+            so I'm the
+            right person to talk to about rural property adventures.
+            <br><br>
+            I prefer to work East of Kingman, West of Ashfork, and North of Wikieup, but for some, I'll go to the
+            fringes
+            of
+            the DRRE preferred areas.
+            <br><br>
+            When someone tells you that "it can't be done" (in regards to rural properties or financing for off-grid) I
+            am
+            who you should be talking to: I can get-'er-dun!
+          </p>
+        </details>
+      </div>
+    </div>
+
+    <div>
+      <img class="line_break_photo" src="../resources/DRRE_line_break_0.jpg" />
+    </div>
+
+    <div class="entry">
+      <img class="agent_photo_right" src="images/sean_harron.jpeg" />
+      <div class="info_bio">
+        <div class="headers">
+          <h1 class="info_header_left margin_header">Sean Harron</h1>
+          <div class="contact_div">
+            <img src="../resources/skills_icon.png" class="contact_icon" />
+            <a class="info_header_left contact_info">Realtor, Construction Insights, Jack of All Trades</a>
+          </div>
+          <div class="contact_div">
+            <img src="../resources/email_icon.png" class="contact_icon" />
+            <a class="info_header_left contact_info" href="mailto:sean@mohaveoffgrid.com">sean@mohaveoffgrid.com</a>
+          </div>
+          <div class="contact_div">
+            <img src="../resources/phone_icon.png" class="contact_icon" />
+            <a class="info_header_left contact_info" href="tel:928-715-2224">(928)715-2224</a>
+          </div>
+        </div>
+
+        <details>
+          <summary class="section_header more_info">More Information</summary>
+          <p class="agent_bio">
+            I'm Elise's husband, usually behind the scenes and available for everything Dirt Road Real Estate
+            related. I'm a Butcher, a Baker and a Candlestick maker: I've been a Developer, General Contractor, Master
+            Electrician, and head of my own construction and development
+            company. I bring a lot to the party!
+            <br><br>
+            I've been in the building and real estate industry for over
+            35 years. I started on the East coast doing Real Estate in New Jersey, bounced to the Pacific island of
+            American Samoa, lept into Las Vegas
+            and finally ended up in beautiful Mohave County Arizona. I live outside of Kingman with the love of my life
+            and stay busy with the tasks of rural living every day. I look forward to helping people make good choices
+            and understand the full reality of rural living. It's not as easy as the brochure makes it look!
+          </p>
+        </details>
+      </div>
+    </div>
+
+    <div>
+      <img class="line_break_photo" src="../resources/DRRE_line_break_1.jpg" />
+    </div>
+
+    <div class="entry">
+      <div>
+        <img class="agent_photo_left" src="images/janay_richardson.jpg" />
+      </div>
+      <div class="info_bio">
+
+        <div class="headers">
+          <h1 class="info_header_left margin_header">Janay Richardson</h1>
+          <div class="contact_div">
+            <img src="../resources/skills_icon.png" class="contact_icon" />
+            <a class="info_header_left contact_info">Multi-Tasker, Contract Manager, Homeschool Mom</a>
+          </div>
+          <div class="contact_div">
+            <img src="../resources/email_icon.png" class="contact_icon" />
+            <a class="info_header_left contact_info"
+              href="mailto:RichardsonJanay2@gmail.com">RichardsonJanay2@gmail.com</a>
+          </div>
+          <div class="contact_div">
+            <img src="../resources/phone_icon.png" class="contact_icon" />
+            <a class="info_header_left contact_info" href="tel:702-767-0444">(702)767-0444</a>
+          </div>
+        </div>
+
+        <details>
+          <summary class="section_header more_info">More Information</summary>
+          <p class="agent_bio">
+            I was raised in Las Vegas, NV and and currently live in homes in both
+            Henderson,
+            NV and Golden Valley, AZ. I have a degree in Special Education / Elementary Education. I love the
+            flexibility that real estate provides me so I can operate behind the scenes
+            for
+            all our agents and stay home with my kids at the same time.
+            <br><br>
+            I am now an Associate Broker for Dirt Road Real Estate and I touch every piece of paper
+            related to DRRE to make sure Elise is free to have conversations and interaction with all our clients and
+            customers. I am the Broker Admin for all things DRRE and I can assist you with getting in touch with any
+            of
+            our agents. I am available to assist with anything DRRE in the event that Elise is busy.
+            <br><br>
+            I chose to be a realtor because I wanted a little something extra out of life and realty has always been
+            very
+            interesting to me. It is very fulfilling to be a part of someone's dream coming true. Never gets old.
+          </p>
+        </details>
+      </div>
+    </div>
+
+    <div>
+      <img class="line_break_photo" src="../resources/DRRE_line_break_2.jpg" />
+    </div>
+
+    <div class="entry">
+      <div>
+        <img class="agent_photo_right" src="images/leanne_smith.jpeg" />
+      </div>
+      <div class="info_bio">
+
+        <div class="headers">
+          <h1 class="info_header_left margin_header">Leanne Smith</h1>
+          <div class="contact_div">
+            <img src="../resources/skills_icon.png" class="contact_icon" />
+            <a class="info_header_left contact_info">Realtor, Military Relocation, Vacant Land Specialist</a>
+          </div>
+          <div class="contact_div">
+            <img src="../resources/email_icon.png" class="contact_icon" />
+            <a class="info_header_left contact_info"
+              href="mailto:leannehoaglandsmith@gmail.com">leannehoaglandsmith@gmail.com</a>
+          </div>
+          <div class="contact_div">
+            <img src="../resources/phone_icon.png" class="contact_icon" />
+            <a class="info_header_left contact_info" href="tel:928-249-4053">(928)249-4053</a>
+          </div>
+        </div>
+
+        <details>
+          <summary class="section_header more_info">More Information</summary>
+          <p class="agent_bio">
+            Our paths in life continually change yet our values do not. When my husband and I moved here to NW AZ in
+            2017 from the Midwest (NW IN), a new path opened up where I can enjoy incredible sunrises and sunsets, the
+            open range, wild burros and 360 mountains views. This new path, becoming part of the Dirt Road Real Estate
+            family, allowed me to share that enjoyment with others who wish to live here in one of the last vestiges of
+            the Old Wild West.
+            <br><br>
+            Plain and simple, I love selling dirt here in Golden Valley along with to the north and west of Kingman
+            including White Hills and Yucca.
+            <br><br>
+            What I do know from my 5 decades of professional corporate sales experience people buy from people they know
+            and trust. Finding someone who truly appreciates the ins and outs of rural living; actually drives to the
+            vacant land parcels; understands financing, road and utilities access along with county requirements; and
+            “protects and promote you” as a client is essential when considering hiring an agent. I look forward to
+            hearing from and working with you.
+          </p>
+        </details>
+      </div>
+    </div>
+
+    <div>
+      <img class="line_break_photo" src="../resources/DRRE_line_break_3.jpg" />
+    </div>
+
+    <div class="entry">
+      <div>
+        <img class="agent_photo_left" src="images/cheryl_robertson.jpg" />
+      </div>
+      <div class="info_bio">
+
+        <div class="headers">
+          <h1 class="info_header_left margin_header">Cheryl Robertson</h1>
+          <div class="contact_div">
+            <img src="../resources/skills_icon.png" class="contact_icon" />
+            <a class="info_header_left contact_info">Rural Land, Kingman Homes, Lot Development</a>
+          </div>
+          <div class="contact_div">
+            <img src="../resources/email_icon.png" class="contact_icon" />
+            <a class="info_header_left contact_info" href="mailto:cheryl@azruralhomes.com">cheryl@azruralhomes.com</a>
+          </div>
+          <div class="contact_div">
+            <img src="../resources/phone_icon.png" class="contact_icon" />
+            <a class="info_header_left contact_info" href="tel:928-716-4048">(928)716-4048</a>
+          </div>
+        </div>
+
+        <details>
+          <summary class="section_header more_info">More Information</summary>
+          <p class="agent_bio">
+            I've lived in many communities, both rural and urban, and different states. In 2013, we bought 45 acres in
+            the rural mountains of Mohave County to hike, shoot, and camp on with our kids—truly one of the definitions
+            of 'quiet enjoyment' of our property (okay, mostly quiet…). That property started a love affair with a new
+            countryside, county, and lifestyle, and a place for us to put down roots, and now Kingman is home.
+            <br><br>
+            I became a realtor in 2019 and have handled more than 100 transactions to date. I love to help other people
+            find their quiet enjoyment—whatever that is for them. My recent experience of working with a fantastic
+            contractor to build a stick-built house off 4 miles of dirt road and ending up with a beautiful home that
+            has utility company power, septic, and a well has taught me more about that process than any book ever
+            could. I'm a problem-solver at heart, and matching up a client with their 'right' property is a wonderful
+            'problem' to solve.
+            <br><br>
+            My areas of expertise include east of Kingman, west of Ash Fork, north of Wikieup, and of course Kingman
+            itself, but I've gone almost everywhere in the county as my clients really hone in on what fits their needs.
+            Our little piece of Heaven in northwest Arizona just has so much to offer!
+          </p>
+        </details>
+      </div>
+    </div>
+
+    <div>
+      <img class="line_break_photo" src="../resources/DRRE_line_break_0.jpg" />
+    </div>
+
+    <div class="entry">
+      <div>
+        <img class="agent_photo_right" src="images/fred_richardson.jpg" />
+      </div>
+      <div class="info_bio">
+
+        <div class="headers">
+          <h1 class="info_header_left margin_header">Fred Richardson</h1>
+
+
+          <div class="contact_div">
+            <img src="../resources/skills_icon.png" class="contact_icon" />
+            <a class="info_header_left contact_info">Patient, Detail-Oriented, Licensed Home Inspector</a>
+          </div>
+          <div class="contact_div">
+            <img src="../resources/email_icon.png" class="contact_icon" />
+            <a class="info_header_left contact_info"
+              href="mailto:dirtroadrich@protonmail.com">dirtroadrich@protonmail.com</a>
+          </div>
+          <div class="contact_div">
+            <img src="../resources/phone_icon.png" class="contact_icon" />
+            <a class="info_header_left contact_info" href="tel:702-525-4348">(702)525-4348</a>
+          </div>
+        </div>
+
+        <details>
+          <summary class="section_header more_info">More Information</summary>
+          <p class="agent_bio">
+            Fred joined Dirt Road Real Estate because he saw his wife, Janay, having all the fun. Fred's previous work
+            experience
+            was scheduling multiple people's work efforts and working as the troubleshooter for those events. This made
+            him <i>very</i> well qualified for
+            the reality of a Realtor's work efforts!
+            <br><br>
+            Fred recently gained another qualification: he is a licensed Home Inspector. He's available to any of the
+            Dirt Road Agents, but his closeness to our company and agents must be acknowledged and accepted, and he's
+            scrupulous about avoiding conflict of interest. Fred tends to do mostly
+            land
+            transactions as a realtor for this reason. Fred is available for the Western part of Mohave County,
+            Mohave
+            Valley, White Hills, Golden Valley, and Kingman.
+          </p>
+        </details>
+      </div>
+    </div>
+
+    <div>
+      <img class="line_break_photo" src="../resources/DRRE_line_break_1.jpg" />
+    </div>
+
+    <div class="entry">
+      <div>
+        <img class="agent_photo_left" src="images/sarah_foltyn.jpeg" />
+      </div>
+      <div class="info_bio">
+
+        <div class="headers">
+          <h1 class="info_header_left margin_header">Sarah Foltyn</h1>
+          <div class="contact_div">
+            <img src="../resources/skills_icon.png" class="contact_icon" />
+            <a class="info_header_left contact_info">Realtor, Offgrid Living</a>
+          </div>
+          <div class="contact_div">
+            <img src="../resources/email_icon.png" class="contact_icon" />
+            <a class="info_header_left contact_info" href="mailto:sarahfoltyn.az@gmail.com">sarahfoltyn.az@gmail.com</a>
+          </div>
+          <div class="contact_div">
+            <img src="../resources/phone_icon.png" class="contact_icon" />
+            <a class="info_header_left contact_info" href="tel:928-715-7885">(928)715-7885</a>
+          </div>
+        </div>
+
+        <details>
+          <summary class="section_header more_info">More Information</summary>
+          <p class="agent_bio">
+            I have always been a lover of Real Estate. In 2020 my husband and I had the opportunity to
+            follow our dream and purchase land of our own. We searched for years before falling in love with our
+            property here in Kingman. In 2021 we sold our home in Northern California, moved our family, and never
+            looked back! We developed our off-grid homestead from raw land, in which I gained a wealth of
+            knowledge and experience to help others along their journey; I can tell you about everything that you don't
+            know about, from setting up fences and storage building to setting up a mailbox.
+            <br><br>
+            The years of searching, and the process of bringing our dream to life pushed me toward a new
+            career as a Realtor. My hope is to help you find your perfect paradise whether it be a home, land, or
+            anything else in between!
+          </p>
+        </details>
+      </div>
+    </div>
+
+    <div>
+      <img class="line_break_photo" src="../resources/DRRE_line_break_2.jpg" />
+    </div>
+
+    <div class="entry">
+      <div>
+        <img class="agent_photo_right" src="images/debra_stockton.jpg" />
+      </div>
+      <div class="info_bio">
+        <div class="headers">
+          <h1 class="info_header_left margin_header">Debra Stockton</h1>
+          <div class="contact_div">
+            <img src="../resources/skills_icon.png" class="contact_icon" />
+            <a class="info_header_left contact_info">Realtor, Spanish, Fulltime Offgrid</a>
+          </div>
+          <div class="contact_div">
+            <img src="../resources/email_icon.png" class="contact_icon" />
+            <a class="info_header_left contact_info" href="mailto:debsellsmcaz@gmail.com">debsellsmcaz@gmail.com</a>
+          </div>
+          <div class="contact_div">
+            <img src="../resources/phone_icon.png" class="contact_icon" />
+            <a class="info_header_left contact_info" href="tel:928-598-3855">(928)598-3855</a>
+          </div>
+        </div>
+
+        <details>
+          <summary class="section_header more_info">More Information</summary>
+          <p class="agent_bio">
+            Born and raised in Southern California, I have always embraced the vibrant energy and diverse culture of my
+            surroundings. I am fluent in Spanish, which has enriched my personal and professional interactions.
+            <br><br>
+            My
+            journey brought me to Arizona, where the river and the rugged landscape serve as a constant source of
+            inspiration. I am passionate about living off-grid and living close to nature, which fuels my love for
+            racing and outdoor adventures. There's something profoundly fulfilling about working with people who share
+            my enthusiasm for the outdoors and sustainable living.
+          </p>
+        </details>
+      </div>
+    </div>
+
+    <div>
+      <img class="line_break_photo" src="../resources/DRRE_line_break_3.jpg" />
+    </div>
+
+    <div class="entry">
+      <div>
+        <img class="agent_photo_left" src="images/ann_buckner.jpg" />
+      </div>
+      <div class="info_bio">
+        <div class="headers">
+          <h1 class="info_header_left margin_header">Ann Buckner</h1>
+          <div class="contact_div">
+            <img src="../resources/skills_icon.png" class="contact_icon" />
+            <a class="info_header_left contact_info">Realtor, First Time Buyers, Probate</a>
+          </div>
+          <div class="contact_div">
+            <img src="../resources/email_icon.png" class="contact_icon" />
+            <a class="info_header_left contact_info" href="mailto:annbcknr@gmail.com">annbcknr@gmail.com</a>
+          </div>
+          <div class="contact_div">
+            <img src="../resources/phone_icon.png" class="contact_icon" />
+            <a class="info_header_left contact_info" href="tel:717-538-0435">(717)538-0435</a>
+          </div>
+        </div>
+
+        <details>
+          <summary class="section_header more_info">More Information</summary>
+          <p class="agent_bio">
+            I've been in Real Estate for some time now. My favorite part is helping first time home buyers find the
+            perfect place for them. Your home is likely to be the largest single investment you make in your lifetime,
+            and I'm happy to help walk you through a process that can seem intimidating without experienced help.
+            <br><br>
+            Reach out to me for anything in Northern Mohave County, Residential or Land. Real Estate transactions can be
+            complex, so I'm here to help guide you through the intricacies of the process. I'm also trained in
+            probate sales and am happy to be a resource there as well.
+          </p>
+        </details>
+      </div>
+    </div>
+
+    <div>
+      <img class="line_break_photo" src="../resources/DRRE_line_break_0.jpg" />
+    </div>
+
+    <div class="entry">
+      <div>
+        <img class="agent_photo_right" src="images/lyndzi_stockton.jpg" />
+      </div>
+      <div class="info_bio">
+        <div class="headers">
+          <h1 class="info_header_left margin_header">Lyndzi Stockton</h1>
+          <div class="contact_div">
+            <img src="../resources/skills_icon.png" class="contact_icon" />
+            <a class="info_header_left contact_info">Realtor, Spanish, Sign Language</a>
+          </div>
+          <div class="contact_div">
+            <img src="../resources/email_icon.png" class="contact_icon" />
+            <a class="info_header_left contact_info"
+              href="mailto:lyndzisellsdirtaz@gmail.com">lyndzisellsdirtaz@gmail.com</a>
+          </div>
+          <div class="contact_div">
+            <img src="../resources/phone_icon.png" class="contact_icon" />
+            <a class="info_header_left contact_info" href="tel:928-727-7365">(928)727-7365</a>
+          </div>
+
+          <details>
+            <summary class="section_header more_info">More Information</summary>
+            <p class="agent_bio">
+              I am a real estate professional with a passion for helping people. I thrive on guiding clients through the
+              exciting journey of finding their dream homes. When I'm not closing deals, you can find me exploring the
+              great outdoors or immersing myself in the world of art. With a keen eye for detail, I'm dedicated
+              to providing an exceptional experience for every person I have the pleasure of working with.
+              <br><br>
+              I speak English and Spanish, I am also in the process of learning sign language. My hobbies include music
+              and outdoorsmanship; ask me about my favorite parts of Mohave county!
+            </p>
+          </details>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <hr>
+
+  <br><br>
+  <div id="footer" class="footer">
+    <img src="../resources/DRRE_logo_full_clear.png" class="footer_logo"
+      alt="The Dirt Road Real Estate logo; a yellow jeep in a mountainous backdrop.">
+    <div>
+      <h3 class="footer-text">
+        Please contact us at:
+      </h3>
+      <div class="contact_div">
+        <img src="../resources/email_icon.png" class="contact_icon" />
+        <a class="info_header_left contact_info" href="mailto:elise.harron@gmail.com">elise.harron@gmail.com</a>
+      </div>
+      <div class="contact_div">
+        <img src="../resources/phone_icon.png" class="contact_icon" />
+        <a class="info_header_left contact_info" href="tel:928-897-1364">(928)897-1364</a>
+      </div>
+    </div>
+    <div>
+      <img src="../resources/MLS_EHS_logo.jpg" class="legal_image"
+        alt="The combined logos for the MLS and Equal Housing Opportunity." />
+    </div>
+  </div>
+</body>
+
+</html>
