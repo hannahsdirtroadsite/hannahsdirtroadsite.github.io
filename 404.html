@@ -1,17 +1,30 @@
 <script>
-    window.onload = () => {
+    async function checkUrl() {
         currentURL = window.location.href;
-        if (/[A-Z]/.test(str)) {
+        if (/[A-Z]/.test(currentURL)) {
             lowerCaseURL = currentURL.toLowerCase();
             if (currentURL != lowerCaseURL) {
                 location.replace(lowerCaseURL);
             }
         }
+        else {
+            for (let i = 0; i < 5; i++) {
+                await wait1Sec();
+                document.getElementById('secs').innerText = 5 - i
+            }
+            window.location.href="index.html";
+        }
     };
+
+    async function wait1Sec() {
+        await new Promise(resolve => setTimeout(resolve, 1000)) .then(() => { console.log('wait'); });
+    }
 </script>
 
-<body>
+<body onload="checkUrl()">
     <center>
         <h1>Page Not Found</h1>
+        <h1>Returning to Home Page in <span id='secs'>5</span> seconds....</h1>
+        <a href="index.html">Return To Home</a>
     </center>
 </body>
