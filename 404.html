@@ -8,7 +8,7 @@
             }
         }
         else {
-            document.getElementsByTagName('body').style.display = 'block'
+            document.body.style.display = 'block'
             for (let i = 0; i < 5; i++) {
                 await wait1Sec();
                 document.getElementById('secs').innerText = 5 - i
