@@ -57,31 +57,35 @@ async function loadPosts() {
 
 //the function that builds the div of currently selected tags, or hides it in case there are no selected tags
 function displaySelectedTags() {
-    let tags = localStorage.getItem("tags");
-    let tagDiv = document.getElementById('active_tags_div');
-    let tagLabel = document.getElementById('active_tags_label');
-    tagDiv.innerHTML = ''
-    if (tags == null || tags == undefined || tags == '' || tags == ',') {
-        tagDiv.style.visibility = "hidden"
-        tagDiv.style.display = "none"
-        tagLabel.style.display = "none"
-        localStorage.setItem("tags", '');
-        return;
-    }
-    tagDiv.style.visibility = "visible"
-    tagDiv.style.display = "flex"
-    tagLabel.style.display = "block"
-    tagsList = tags.split(',')
+    try {
+        let tags = getTags()
+        let tagDiv = document.getElementById('active_tags_div');
+        let tagLabel = document.getElementById('active_tags_label');
+        tagDiv.innerHTML = ''
+        if (tags == '') {
+            tagDiv.style.visibility = "hidden"
+            tagDiv.style.display = "none"
+            tagLabel.style.display = "none"
+            localStorage.setItem("tags", "");
+            return;
+        }
+        tagDiv.style.visibility = "visible"
+        tagDiv.style.display = "flex"
+        tagLabel.style.display = "block"
+        tagsList = tags.split(',')
 
-    for (let i = 0; i < tagsList.length - 1; i++) {
-        tag = document.createElement("button");
-        tag.classList.add('active_tag_button')
-        tag.innerText = tagsList[i] + ' ☒';
-        tag.id = tagsList[i];
-        tag.addEventListener('click', function (e) {
-            unfilterTag(this)
-        });
-        tagDiv.appendChild(tag)
+        for (let i = 0; i < tagsList.length - 1; i++) {
+            tag = document.createElement("button");
+            tag.classList.add('active_tag_button')
+            tag.innerText = tagsList[i] + ' ☒';
+            tag.id = tagsList[i];
+            tag.addEventListener('click', function (e) {
+                unfilterTag(this)
+            });
+            tagDiv.appendChild(tag)
+        }
+    } catch (error) {
+        return;
     }
 }
 
@@ -89,27 +93,31 @@ function displaySelectedTags() {
 function newBlogPost(entry) {
     newDiv = document.createElement("div");
     newDiv.classList.add("entry_div")
-
-    newH = document.createElement("h2");
-    newH.innerText = entry['title']
-    newDiv.appendChild(newH)
-
-    date = document.createElement('h3')
-    updated = new Date(entry['updated'])
-    date.innerText = updated.toDateString()
-    newDiv.appendChild(date)
-
-    auth = document.createElement('h3')
-    authro = entry['author']['displayName']
-    auth.innerText = authro
-    newDiv.appendChild(auth)
-
-    body = document.createElement("div");
-    body.classList.add("entry_body")
-    body.innerHTML = entry['content'].replaceAll('<span class="blog_post_text">', '').replaceAll('</span>', '').replaceAll('&nbsp;', '')
-    newDiv.appendChild(body)
-
-    return newDiv;
+    try {
+        newH = document.createElement("h2");
+        newH.innerText = entry['title']
+        newDiv.appendChild(newH)
+    
+        date = document.createElement('h3')
+        updated = new Date(entry['updated'])
+        date.innerText = updated.toDateString()
+        newDiv.appendChild(date)
+    
+        auth = document.createElement('h3')
+        authro = entry['author']['displayName']
+        auth.innerText = authro
+        newDiv.appendChild(auth)
+    
+        body = document.createElement("div");
+        body.classList.add("entry_body")
+        body.innerHTML = entry['content'].replaceAll('<span class="blog_post_text">', '').replaceAll('</span>', '').replaceAll('&nbsp;', '')
+        newDiv.appendChild(body)
+    
+        return newDiv;
+    }
+    catch (error) {
+        return newDiv;
+    }
 }
 
 //tag bars are separate from blog posts for formatting reasons; these are the tags for each post.

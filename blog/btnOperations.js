@@ -10,7 +10,8 @@ var requestOptions = {
 
 //send a specified request and return json response
 async function sendRequest() {
-    tags = localStorage.getItem("tags")
+    tags = getTags()
+
     search = document.getElementById('search_input').value
     const response = await fetch(blogURL + "?labels=" + tags + "&search=" + search, requestOptions)
     const json = await response.json()
@@ -19,7 +20,7 @@ async function sendRequest() {
 
 //adds a filter tag to the system
 async function filterTag(tag) {
-    let tags = localStorage.getItem("tags")
+    let tags = getTags()
     localStorage.setItem("tags", tags + tag.innerText + ",")
 
     loadPosts()
@@ -27,7 +28,7 @@ async function filterTag(tag) {
 
 //removes a filter tag from the system
 function unfilterTag(tag) {
-    let tags = localStorage.getItem("tags");
+    let tags = getTags();
     tags = tags.replace(tag.id + ',', '');
 
     localStorage.setItem("tags", tags);
@@ -92,4 +93,20 @@ function changePage() {
     }
 
     scroll(0, 0)
+}
+
+function getTags() {
+    try {
+        tags = localStorage.getItem("tags")
+    }
+    catch (error) {
+        return ''
+    }
+    
+    if (tags == null || tags == undefined || tags == '' || tags == ',') {
+        return ''
+    }
+    else {
+        return tags
+    }
 }

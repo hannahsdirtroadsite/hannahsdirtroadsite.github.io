@@ -233,6 +233,7 @@ select {
 .pagination_drop {
     width: max-content;
     background-color: white;
+    border-radius: 15px;
 }
 
 .invalid_arrow {
