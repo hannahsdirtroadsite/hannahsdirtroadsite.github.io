@@ -71,7 +71,7 @@ th {
 
 @media (min-width: 600px) {
     .content_image {
-        width: 50vw;
+        width: 25vw;
         float: left;
         margin: 5vw;
     }
