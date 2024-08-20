@@ -135,3 +135,11 @@ th {
     width: 10vw;
     min-width: 80px;
 }
+
+.long_th {
+    min-width: 60%;
+}
+
+.short_th {
+    min-width: 20%;
+}

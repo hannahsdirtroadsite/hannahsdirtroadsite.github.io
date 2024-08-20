@@ -6,18 +6,19 @@
   <meta name="viewport" content="width=device-width">
   <title>Cooperation</title>
   <link rel="icon" href="../resources/DRRE_logo_icon.png">
-  <link rel="apple-touch-icon" href="../resources/DRRE_logo_icon.png">
-  <meta name="msapplication-TileImage" content="../resources/DRRE_logo_icon.png">
-  <meta name="keywords" content="Dirt Road Real Estate, Real Estate, Offgrid, Offroad, Kingman, Seligman, Hackberry, Ash Fork, Mohave, Cononino, Northwest Arizona, Northern Arizona, Arizona, Interstate 40, Bullhead, Lake Mead, Hualapai, Route 66, Wickieup, Wickiup, Peach Springs, White Hills, Golden Valley, Dirt Road Realtor, Rural Property Realtor, Land Realtor, Residential Property, Home for sale, Vacant Land, Horse Property, Large Acreage, Residential Property, Sustainable Property, Sustainable Homesite, near me, Land for Sale, For sale">
+  <link rel="apple-touch-icon" href="../resources/DRRE_logo_full_clear.png">
+  <meta name="msapplication-TileImage" content="../resources/DRRE_logo_full_clear.png">
+  <meta name="keywords"
+    content="Dirt Road Real Estate, Real Estate, Offgrid, Offroad, Kingman, Seligman, Hackberry, Ash Fork, Mohave, Cononino, Northwest Arizona, Northern Arizona, Arizona, Interstate 40, Bullhead, Lake Mead, Hualapai, Route 66, Wickieup, Wickiup, Peach Springs, White Hills, Golden Valley, Dirt Road Realtor, Rural Property Realtor, Land Realtor, Residential Property, Home for sale, Vacant Land, Horse Property, Large Acreage, Residential Property, Sustainable Property, Sustainable Homesite, near me, Land for Sale, For sale">
 
   <link href="css/cooperation_style.css" rel="stylesheet" type="text/css" />
   <link href="css/modal_style.css" rel="stylesheet" type="text/css" />
   <link href="../resources/header_footer_style.css" rel="stylesheet" type="text/css" />
 
-    <link href="../resources/fonts/fonts_style.css" rel="stylesheet" type="text/css" />
+  <link href="../resources/fonts/fonts_style.css" rel="stylesheet" type="text/css" />
 
   <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
-  
+
 
   <script src="js/searchOperations.js"></script>
   <script src="js/apiOperations.js"></script>
@@ -33,12 +34,12 @@
     <div class="drop_down" id="header_drop_down">
       <div class="tab_bar" id="tab_bar">
         <button class="other_pg_btn tab_btn" onclick='window.location.href="../";'>Home</button>
-        <button class="other_pg_btn tab_btn" onclick='window.location.href="../about/";'>About</button>
-        <button class="other_pg_btn tab_btn" onclick='window.location.href="../properties/";'>Properties</button>
-        <button class="other_pg_btn tab_btn" onclick='window.location.href="../communities/";'>Communities</button>
-        <button class="current_pg_btn tab_btn" onclick='window.location.href="../cooperation/";'>Cooperation</button>
-        <button class="other_pg_btn tab_btn" onclick='window.location.href="../blog/";'>Blog</button>
-        <button class="other_pg_btn tab_btn" onclick='window.location.href="../contact/";'>Contact Us</button>
+        <button class="other_pg_btn tab_btn" onclick='window.location.href="../about";'>About</button>
+        <button class="other_pg_btn tab_btn" onclick='window.location.href="../properties";'>Properties</button>
+        <button class="other_pg_btn tab_btn" onclick='window.location.href="../communities";'>Communities</button>
+        <button class="current_pg_btn tab_btn" onclick='window.location.href="../cooperation";'>Cooperation</button>
+        <button class="other_pg_btn tab_btn" onclick='window.location.href="../blog";'>Blog</button>
+        <button class="other_pg_btn tab_btn" onclick='window.location.href="../contact";'>Contact Us</button>
       </div>
     </div>
   </div>
@@ -55,16 +56,16 @@
     }
   </script>
 
-<div class="header">
-  <div class="photo_div">
+  <div class="header">
+    <div class="photo_div">
       <img src="../resources/DRRE_header.png" class="header_image_full"
-          alt="The Dirt Road Real Estate logo; a yellow jeep in a mountainous backdrop.">
+        alt="The Dirt Road Real Estate logo; a yellow jeep in a mountainous backdrop.">
       <div class="title_grid">
-          <p class="header_text company_text">DIRT ROAD REAL ESTATE</p>
-          <p class="header_text page_text">Cooperation</p>
+        <p class="header_text company_text">DIRT ROAD REAL ESTATE</p>
+        <p class="header_text page_text">Cooperation</p>
       </div>
+    </div>
   </div>
-</div>
 
   <hr>
 
@@ -85,7 +86,8 @@
           your interest in the transaction.
           <br><br>
           Caution that if it is NOT in writing, it is NOT reliable. In addition, we are an Agency of humans and mistakes
-          are possible even on this co-op page, please always get your cooperation in writing via the Seller Compensation Addendum or
+          are possible even on this co-op page, please always get your cooperation in writing via the Seller
+          Compensation Addendum or
           something similar.
           <br><br>
           Generally Dirt Road Real Estate encourages our sellers to offer compensation to Buyers Agents. The amount and
@@ -99,7 +101,7 @@
 
     <div class="search_div">
       <div class="search_bar_div">
-          <input id="search_input" type="text" class="search_bar" placeholder=" Search" onkeypress="handle(event)"
+        <input id="search_input" type="text" class="search_bar" placeholder=" Search" onkeypress="handle(event)"
           onsubmit="loadPosts()" required><button onclick="loadPosts()" class="submit_search"> Search </button></input>
       </div>
     </div>
@@ -108,9 +110,9 @@
 
     <table id="listingsTable" class="display" style="width:100%">
       <tr>
-        <th># or Name</th>
-        <th>MLS Number (WARDEX)</th>
-        <th>Compensation for Full Price Offer</th>
+        <th class="long_th">Address (# or Name)</th>
+        <th class="short_th">MLS Number (WARDEX)</th>
+        <th class="short_th">Compensation for Full Price Offer</th>
       </tr>
     </table>
 
@@ -119,7 +121,6 @@
     <div id="priceModal" class="modal" style="display: none">
       <div class="modal-content">
         <span class="close" id="close-priceModal" onclick="closeModal()">&times;</span>
-
         <div class="modal-content-grid">
           <label for="mod_address">Address: </label>
           <label id="mod_address" class="item"></label>
@@ -129,7 +130,6 @@
 
           <label for="mod_payment">Cooperation Model: </label>
           <p id="mod_payment" class="item"></p>
-
         </div>
       </div>
 
@@ -147,14 +147,14 @@
       <h3 class="footer-text">
         Please contact us at:
       </h3>
-               <div class="contact_div">
-            <img src="../resources/email_icon.png" class="contact_icon" />
-            <a class="info_header_left contact_info" href="mailto:elise.harron@gmail.com">elise.harron@gmail.com</a>
-          </div>
-          <div class="contact_div">
-            <img src="../resources/phone_icon.png" class="contact_icon" />
-            <a class="info_header_left contact_info" href="tel:928-897-1364">(928)897-1364</a>
-          </div>
+      <div class="contact_div">
+        <img src="../resources/email_icon.png" class="contact_icon" />
+        <a class="info_header_left contact_info" href="mailto:elise.harron@gmail.com">elise.harron@gmail.com</a>
+      </div>
+      <div class="contact_div">
+        <img src="../resources/phone_icon.png" class="contact_icon" />
+        <a class="info_header_left contact_info" href="tel:928-897-1364">(928)897-1364</a>
+      </div>
     </div>
     <div>
       <img src="../resources/MLS_EHS_logo.jpg" class="legal_image"
