@@ -37,6 +37,9 @@ async function login() {
     document.getElementById("setup_username").value = uname;
   }
   else if (resJson['status'] == "Login") {
+    console.log(resJson)
+    console.log(resJson['token'])
+
     localStorage.setItem('coopToken', resJson['token'])
     localStorage.setItem('username', uname)
     window.location.href = "cooperation_portal.html";
@@ -74,13 +77,14 @@ async function setInformation() {
 
   let resJson = await JSON.parse(response);
 
+  console.log(resJson['status'])
+
   if (resJson['status'] == "Invalid") {
     error = document.getElementById("errorText");
     error.style.display = "block";
   }
 
   else if (resJson['status'] == "Valid") {
-    localStorage.setItem('username', uname)
     document.getElementById("setupModal").style.display = "none";
     document.getElementById("loginModal").style.display = "block";
   }
