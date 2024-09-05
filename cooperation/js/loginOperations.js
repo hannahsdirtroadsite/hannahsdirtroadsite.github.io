@@ -26,6 +26,8 @@ async function login() {
   //send request
   let response = await sendRequest("POST", data, loginUrl);
 
+  console.log(resJson)
+  console.log(resJson['token'])
   let resJson = await JSON.parse(response);
 
   if (resJson['status'] == "Invalid") {
@@ -37,9 +39,6 @@ async function login() {
     document.getElementById("setup_username").value = uname;
   }
   else if (resJson['status'] == "Login") {
-    console.log(resJson)
-    console.log(resJson['token'])
-
     localStorage.setItem('coopToken', resJson['token'])
     localStorage.setItem('username', uname)
     window.location.href = "cooperation_portal.html";
