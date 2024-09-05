@@ -26,6 +26,8 @@ async function login() {
   //send request
   let response = await sendRequest("POST", data, loginUrl);
 
+  console.log(response)
+
   let resJson = await JSON.parse(response);
   console.log(resJson)
   console.log(resJson['token'])
