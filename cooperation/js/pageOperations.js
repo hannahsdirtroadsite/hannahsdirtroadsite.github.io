@@ -149,8 +149,6 @@ async function authenticateToken(username, token) {
   }
 
   else if (resJson['status'] == "Login") {
-    console.log('auth token')
-    console.log(String.fromCharCode(resJson['token']));
     localStorage.setItem('coopToken', resJson['token']);
   }
 }

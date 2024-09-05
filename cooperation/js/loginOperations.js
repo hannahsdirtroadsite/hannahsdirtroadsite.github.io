@@ -26,11 +26,7 @@ async function login() {
   //send request
   let response = await sendRequest("POST", data, loginUrl);
 
-  console.log(response)
-
   let resJson = await JSON.parse(response);
-  console.log(resJson)
-  console.log(resJson['token'])
 
   if (resJson['status'] == "Invalid") {
     document.getElementById("errorText").style.display = "block";
@@ -77,8 +73,6 @@ async function setInformation() {
   let response = await sendRequest("PATCH", data, loginUrl + "/setup");
 
   let resJson = await JSON.parse(response);
-
-  console.log(resJson['status'])
 
   if (resJson['status'] == "Invalid") {
     error = document.getElementById("errorText");
