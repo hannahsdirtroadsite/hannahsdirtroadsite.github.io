@@ -77,8 +77,8 @@ th {
     }
     
     .content_paragraph {
-        margin-top: 5vw;
         text-align: justify;
+        margin-top: 3vw;
         margin-right: auto;
         margin-left: auto;
     }
