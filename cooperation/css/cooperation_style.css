@@ -143,3 +143,12 @@ th {
 .short_th {
     min-width: 20%;
 }
+
+.content_header {
+    font-family: Abraham;
+    color: var(--DRRE_red)
+}
+
+p {
+    color: black;
+}
